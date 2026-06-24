@@ -388,99 +388,17 @@
         Fill out the form below. Attorney Lahann will look up your actual case record and contact you within 2 business days with a clear eligibility determination.
       </p>
 
-      <div id="form-area">
-        <div class="form-error" id="form-error">Please complete all required fields and check the consent box.</div>
-        <div class="form-grid">
-          <div class="form-field">
-            <label class="form-label">First Name <span>*</span></label>
-            <input class="form-input" id="firstName" type="text" placeholder="First name">
-          </div>
-          <div class="form-field">
-            <label class="form-label">Last Name <span>*</span></label>
-            <input class="form-input" id="lastName" type="text" placeholder="Last name">
-          </div>
-          <div class="form-field">
-            <label class="form-label">Email Address <span>*</span></label>
-            <input class="form-input" id="email" type="email" placeholder="you@email.com">
-          </div>
-          <div class="form-field">
-            <label class="form-label">Phone Number <span>*</span></label>
-            <input class="form-input" id="phone" type="tel" placeholder="(505) 000-0000">
-          </div>
-          <div class="form-field full">
-            <label class="form-label">County Where Case Was Filed <span>*</span></label>
-            <select class="form-select" id="county">
-              <option value="">Select a county…</option>
-              <option>Bernalillo County</option><option>Catron County</option><option>Chaves County</option>
-              <option>Cibola County</option><option>Colfax County</option><option>Curry County</option>
-              <option>De Baca County</option><option>Doña Ana County</option><option>Eddy County</option>
-              <option>Grant County</option><option>Guadalupe County</option><option>Harding County</option>
-              <option>Hidalgo County</option><option>Lea County</option><option>Lincoln County</option>
-              <option>Los Alamos County</option><option>Luna County</option><option>McKinley County</option>
-              <option>Mora County</option><option>Otero County</option><option>Quay County</option>
-              <option>Rio Arriba County</option><option>Roosevelt County</option><option>Sandoval County</option>
-              <option>San Juan County</option><option>San Miguel County</option><option>Santa Fe County</option>
-              <option>Sierra County</option><option>Socorro County</option><option>Taos County</option>
-              <option>Torrance County</option><option>Union County</option><option>Valencia County</option>
-            </select>
-            <p class="form-hint">We handle expungements in all 33 New Mexico counties.</p>
-          </div>
-          <div class="form-field full">
-            <label class="form-label">Approximate Year Case Ended</label>
-            <select class="form-select" id="caseYear">
-              <option value="">Select a year…</option>
-              <option>2026</option><option>2025</option><option>2024</option><option>2023</option>
-              <option>2022</option><option>2021</option><option>2020</option><option>2019</option>
-              <option>2018</option><option>2017</option><option>2016</option><option>2015</option>
-              <option>2014</option><option>2013</option><option>2012</option><option>2011</option>
-              <option>2010</option><option>2009</option><option>2008</option><option>2007</option>
-              <option>2006</option><option>2005</option><option>2004</option><option>2003</option>
-              <option>2002</option><option>2001</option><option>2000</option><option>1999</option>
-              <option>1998</option><option>1997</option><option>1996</option><option>1995</option>
-              <option value="before1995">Before 1995</option>
-              <option value="unknown">I'm not sure</option>
-            </select>
-            <p class="form-hint">Your best estimate is fine. We'll verify the exact date when we pull your record.</p>
-          </div>
-          <div class="form-field full">
-            <label class="form-label">Tell Us About Your Case <span>*</span></label>
-            <textarea class="form-textarea" id="caseDesc" rows="5"
-              placeholder="Example: I was arrested around 2017 in Las Cruces. I think it was a drug charge. I completed some kind of program and it was dismissed, but I'm not 100% sure. It's been affecting my job applications and I want to know if I can clear it."></textarea>
-            <p class="form-hint">Plain language is fine — no legal terms needed. Tell us what you remember.</p>
-          </div>
-          <div class="form-field full">
-            <label class="form-label">Have You Contacted Us Before?</label>
-            <select class="form-select" id="priorContact">
-              <option value="">Select…</option>
-              <option value="no">No, this is my first contact</option>
-              <option value="consult">Yes, I've had a consultation</option>
-              <option value="client">Yes, I was a prior client</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="consent-row">
-          <div class="consent-box" id="consentBox" onclick="toggleConsent()"></div>
-          <p class="consent-text">I understand that submitting this form does not create an attorney-client relationship. The information I provide will be used solely to evaluate my eligibility for expungement. Attorney Lahann will review my case and respond within 2 business days.</p>
-        </div>
-
-        <button class="submit-btn" id="submitBtn" onclick="handleSubmit()">
-          Submit My Case for Review →
-        </button>
-      </div>
-
-      <div class="success-msg" id="success-msg">
-        <div class="success-circle">✓</div>
-        <h3>We've Received Your Information</h3>
-        <p>Attorney Lahann will personally review your case and contact you within <strong>2 business days</strong> with a clear eligibility determination and next steps.</p>
-        <div class="next-steps">
-          <h4>What Happens Next</h4>
-          <div class="next-step"><div class="next-step-num">1</div>We pull your case from the court record</div>
-          <div class="next-step"><div class="next-step-num">2</div>Attorney Lahann reviews the actual disposition</div>
-          <div class="next-step"><div class="next-step-num">3</div>You receive a clear eligibility determination by email</div>
-          <div class="next-step"><div class="next-step-num">4</div>If eligible, we outline your options and exact pricing</div>
-        </div>
-        <p style="margin-top:24px;font-size:13px;">Questions? Call us at <strong>(575) 523-4394</strong></p>
+      <div style="overflow:hidden; width:100%;">
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLScidhsd46u2fg_sdwGVAabfukaaMPAroJvTgcXQMwIv9Amh4Q/viewform?embedded=true" 
+          width="100%" 
+          height="2200" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0"
+          style="border:none;">
+          Loading…
+        </iframe>
       </div>
     </div>
   </div>
@@ -497,36 +415,6 @@
   <p class="disclaimer">This website is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Contacting The Lahann Law Firm through this website does not establish representation. © 2024 The Lahann Law Firm, LLC. All rights reserved.</p>
 </footer>
 
-<script>
-  let consentChecked = false;
 
-  function toggleConsent() {
-    consentChecked = !consentChecked;
-    const box = document.getElementById('consentBox');
-    box.classList.toggle('checked', consentChecked);
-    box.innerHTML = consentChecked ? '<span style="color:white;font-size:13px;">✓</span>' : '';
-  }
-
-  function handleSubmit() {
-    const firstName = document.getElementById('firstName').value.trim();
-    const lastName = document.getElementById('lastName').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const county = document.getElementById('county').value;
-    const caseDesc = document.getElementById('caseDesc').value.trim();
-    const errorEl = document.getElementById('form-error');
-
-    if (!firstName || !lastName || !email || !phone || !county || !caseDesc || !consentChecked) {
-      errorEl.style.display = 'block';
-      errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      return;
-    }
-
-    errorEl.style.display = 'none';
-    document.getElementById('form-area').style.display = 'none';
-    document.getElementById('success-msg').style.display = 'block';
-    document.getElementById('success-msg').scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-</script>
 </body>
 </html>
