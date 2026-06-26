@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felony Defense | The Lahann Law Firm — Las Cruces, New Mexico</title>
+<meta name="description" content="Serious felony charges demand serious defense. Thirty-five years of criminal trial experience in Las Cruces and southern New Mexico. Confidential consultations with Jeff Lahann.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#17150f;
+    --ink-2:#211e16;
+    --ink-3:#2c281e;
+    --bone:#ece5d6;
+    --bone-dim:#c9c0ad;
+    --paper:#f3eee2;
+    --oxblood:#7c2b2f;
+    --oxblood-bright:#993539;
+    --brass:#a98a52;
+    --muted:#6b6354;
+    --line-on-dark:rgba(236,229,214,0.14);
+    --line-on-light:rgba(23,21,15,0.12);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Hanken Grotesk",system-ui,sans-serif;
+    font-size:18px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+
+  /* legal-pad margin rule — the page's signature spine */
+  .spine{position:relative;padding-left:34px}
+  .spine::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;
+    width:2px;background:var(--oxblood);opacity:.85;
+  }
+
+  .eyebrow{
+    font-size:12.5px;font-weight:600;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--oxblood);
+    display:flex;align-items:center;gap:12px;
+  }
+  .eyebrow.on-dark{color:var(--brass)}
+  .eyebrow::after{content:"";height:1px;width:46px;background:currentColor;opacity:.5}
+
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:500;line-height:1.05;letter-spacing:-.01em}
+  em{font-style:italic;color:var(--oxblood)}
+  .on-dark em{color:var(--brass)}
+
+  /* ---------- NAV ---------- */
+  header.site{
+    position:absolute;top:0;left:0;right:0;z-index:10;
+    padding:26px 0;
+  }
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between}
+  .mark{
+    font-family:"Fraunces",serif;font-weight:500;font-size:21px;
+    color:var(--bone);letter-spacing:.01em;text-decoration:none;line-height:1.1;
+  }
+  .mark small{display:block;font-family:"Hanken Grotesk",sans-serif;
+    font-size:10.5px;font-weight:600;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--brass);margin-top:3px}
+  .nav-cta{
+    font-family:"Hanken Grotesk",sans-serif;font-size:14px;font-weight:600;
+    color:var(--bone);text-decoration:none;border:1px solid var(--line-on-dark);
+    padding:11px 20px;border-radius:2px;transition:.25s;white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--oxblood);border-color:var(--oxblood)}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--ink);color:var(--bone);
+    padding:172px 0 88px;position:relative;overflow:hidden;
+  }
+  .hero::after{ /* faint vertical brass hairline, far right — distant courtroom column */
+    content:"";position:absolute;top:0;bottom:0;right:14%;
+    width:1px;background:linear-gradient(var(--brass),transparent 70%);opacity:.22;
+  }
+  .hero .eyebrow{margin-bottom:30px}
+  .hero h1{
+    font-size:clamp(2.5rem,6.2vw,5.1rem);
+    max-width:14ch;margin-bottom:30px;color:var(--bone);
+  }
+  .hero h1 .lede{display:block}
+  .hero p.sub{
+    font-size:clamp(1.05rem,1.7vw,1.32rem);
+    color:var(--bone-dim);max-width:46ch;margin-bottom:42px;line-height:1.55;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+  .btn{
+    font-family:"Hanken Grotesk",sans-serif;font-size:16px;font-weight:600;
+    text-decoration:none;padding:16px 30px;border-radius:2px;
+    display:inline-flex;align-items:center;gap:10px;transition:.25s;cursor:pointer;
+  }
+  .btn-primary{background:var(--oxblood);color:#fff}
+  .btn-primary:hover{background:var(--oxblood-bright);transform:translateY(-1px)}
+  .btn-ghost{color:var(--bone);border:1px solid var(--line-on-dark)}
+  .btn-ghost:hover{border-color:var(--brass);color:#fff}
+
+  .hero-facts{
+    margin-top:64px;padding-top:32px;border-top:1px solid var(--line-on-dark);
+    display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:760px;
+  }
+  .fact .n{font-family:"Fraunces",serif;font-size:2.4rem;color:var(--bone);line-height:1}
+  .fact .l{font-size:13px;color:var(--bone-dim);margin-top:8px;letter-spacing:.02em}
+
+  /* ---------- STAKES ---------- */
+  .stakes{background:var(--paper);padding:96px 0}
+  .stakes .lead{
+    font-family:"Fraunces",serif;font-size:clamp(1.6rem,3vw,2.5rem);
+    font-weight:400;line-height:1.25;max-width:24ch;margin-bottom:22px;
+  }
+  .stakes p.body{max-width:58ch;color:var(--muted);font-size:1.08rem}
+  .stakes p.body + p.body{margin-top:18px}
+
+  /* ---------- DEFEND ---------- */
+  .defend{background:var(--ink);color:var(--bone);padding:96px 0}
+  .defend .head{max-width:48ch;margin-bottom:56px}
+  .defend h2{font-size:clamp(2rem,4vw,3rem);color:var(--bone);margin:18px 0 18px}
+  .defend .head p{color:var(--bone-dim);max-width:50ch}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-on-dark);border:1px solid var(--line-on-dark)}
+  .cell{background:var(--ink);padding:34px 30px;transition:.3s}
+  .cell:hover{background:var(--ink-2)}
+  .cell .num{font-family:"Hanken Grotesk",sans-serif;font-size:12px;font-weight:700;
+    letter-spacing:.16em;color:var(--brass);margin-bottom:18px}
+  .cell h3{font-size:1.35rem;color:var(--bone);margin-bottom:12px}
+  .cell p{font-size:.96rem;color:var(--bone-dim);line-height:1.5}
+
+  /* ---------- DIFFERENCE ---------- */
+  .diff{background:var(--paper);padding:100px 0}
+  .diff .top{max-width:46ch;margin-bottom:60px}
+  .diff h2{font-size:clamp(2rem,4vw,3rem);margin:18px 0}
+  .diff-list{display:grid;grid-template-columns:1fr 1fr;gap:48px 64px}
+  .diff-item h3{font-size:1.4rem;margin-bottom:12px}
+  .diff-item p{color:var(--muted);font-size:1.02rem}
+  .diff-item .rule{width:34px;height:2px;background:var(--oxblood);margin-bottom:20px}
+
+  /* ---------- QUOTE / CONVICTION ---------- */
+  .conviction{background:var(--ink-2);color:var(--bone);padding:104px 0;text-align:left}
+  .conviction blockquote{
+    font-family:"Fraunces",serif;font-weight:400;
+    font-size:clamp(1.7rem,3.6vw,2.9rem);line-height:1.25;max-width:24ch;
+  }
+  .conviction .attr{margin-top:34px;font-size:14px;letter-spacing:.04em;color:var(--bone-dim)}
+  .conviction .attr strong{color:var(--brass);font-weight:600}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--ink);color:var(--bone);padding:104px 0 0}
+  .contact h2{font-size:clamp(2.2rem,4.5vw,3.4rem);color:var(--bone);max-width:16ch;margin:18px 0 24px}
+  .contact p.intro{color:var(--bone-dim);max-width:48ch;margin-bottom:44px;font-size:1.1rem}
+  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
+  .contact-actions{display:flex;flex-direction:column;gap:18px;max-width:380px}
+  .line{
+    display:flex;flex-direction:column;gap:4px;
+    padding:22px 0;border-top:1px solid var(--line-on-dark);
+  }
+  .line .k{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);font-weight:600}
+  .line .v{font-family:"Fraunces",serif;font-size:1.5rem;color:var(--bone)}
+  .line .v a{color:inherit;text-decoration:none;border-bottom:1px solid var(--line-on-dark)}
+  .line .v a:hover{border-color:var(--brass)}
+  .line .note{font-size:13.5px;color:var(--bone-dim)}
+  .privacy{margin-top:36px;font-size:13.5px;color:var(--muted);max-width:42ch;line-height:1.55}
+
+  footer{background:var(--ink);color:var(--muted);padding:72px 0 40px;font-size:13px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;
+    border-top:1px solid var(--line-on-dark);padding-top:34px;margin-top:60px}
+  footer a{color:var(--bone-dim);text-decoration:none}
+  footer a:hover{color:var(--brass)}
+  .disclaimer{max-width:62ch;line-height:1.55}
+
+  /* ---------- load motion ---------- */
+  .rise{opacity:0;transform:translateY(16px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.31s}.d4{animation-delay:.44s}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:880px){
+    .hero-facts{grid-template-columns:1fr;gap:22px}
+    .grid{grid-template-columns:1fr}
+    .diff-list{grid-template-columns:1fr;gap:38px}
+    .contact-grid{grid-template-columns:1fr;gap:48px}
+    .nav-cta{display:none}
+    .hero{padding-top:140px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .rise{animation:none;opacity:1;transform:none}
+    html{scroll-behavior:auto}
+    .btn-primary:hover{transform:none}
+  }
+  a:focus-visible,.btn:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="mark" href="/">The Lahann Law Firm<small>Premier Criminal Defense · Est. 2007</small></a>
+    <a class="nav-cta" href="#contact">Confidential Consultation</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow on-dark rise d1">Felony Defense · Southern New Mexico</p>
+    <h1 class="rise d2">
+      <span class="lede">The State has spent months</span>
+      building its case against you. You need someone who has spent <em>thirty-five years</em> taking those cases apart.
+    </h1>
+    <p class="sub rise d3">A felony charge puts your freedom, your name, and your future on the table at once. This is not the moment for the cheapest option, or the busiest one. It is the moment for experience that has been here before.</p>
+    <div class="hero-actions rise d4">
+      <a class="btn btn-primary" href="#contact">Request a confidential consultation</a>
+      <a class="btn btn-ghost" href="#defend">See what we defend</a>
+    </div>
+
+    <div class="hero-facts rise d4">
+      <div class="fact"><div class="n">35</div><div class="l">Years defending the accused in New Mexico courts</div></div>
+      <div class="fact"><div class="n">Trial</div><div class="l">Tested before judges and juries, not just at the plea table</div></div>
+      <div class="fact"><div class="n">Direct</div><div class="l">You work with Jeff Lahann — not a rotating associate</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STAKES -->
+<section class="stakes">
+  <div class="wrap spine">
+    <p class="eyebrow">Why this is different</p>
+    <p class="lead">A felony is not a traffic ticket with higher stakes. It is a different kind of fight.</p>
+    <p class="body">A conviction can take your liberty, your right to vote and to carry a firearm, your professional licenses, your standing in your community, and your ability to earn a living long after any sentence ends. Prosecutors know this. They build felony cases methodically, with investigators and resources, often for months before you ever see the inside of a courtroom.</p>
+    <p class="body">Meeting that requires more than a defense. It requires someone who has stood in these courtrooms for decades, who knows how the local district attorneys think, how the judges rule, and where the State's case is weakest — and who is willing to make the prosecution prove every element of every charge.</p>
+  </div>
+</section>
+
+<!-- DEFEND -->
+<section class="defend" id="defend">
+  <div class="wrap">
+    <div class="head spine">
+      <p class="eyebrow on-dark">Matters we handle</p>
+      <h2>Serious charges. Serious defense.</h2>
+      <p>The Firm focuses on the felony matters where the exposure is greatest and the margin for error is zero. If your freedom is genuinely on the line, this is the work we do.</p>
+    </div>
+    <div class="grid">
+      <div class="cell">
+        <div class="num">01</div>
+        <h3>Drug Trafficking &amp; Distribution</h3>
+        <p>Trafficking, possession with intent, and conspiracy charges — including search-and-seizure challenges where the case often lives or dies.</p>
+      </div>
+      <div class="cell">
+        <div class="num">02</div>
+        <h3>Violent Felonies &amp; Homicide</h3>
+        <p>Assault, aggravated battery, manslaughter, and homicide. The highest-stakes cases, defended with the rigor they demand.</p>
+      </div>
+      <div class="cell">
+        <div class="num">03</div>
+        <h3>White-Collar &amp; Financial Crimes</h3>
+        <p>Fraud, embezzlement, and financial offenses — where reputation and livelihood are at stake alongside liberty.</p>
+      </div>
+      <div class="cell">
+        <div class="num">04</div>
+        <h3>Sex Offenses</h3>
+        <p>Among the most consequential charges a person can face. Defended with discretion, precision, and an unflinching look at the evidence.</p>
+      </div>
+      <div class="cell">
+        <div class="num">05</div>
+        <h3>Weapons &amp; Firearms Charges</h3>
+        <p>Felon-in-possession and aggravated firearm offenses, including constitutional challenges to the stop and the search.</p>
+      </div>
+      <div class="cell">
+        <div class="num">06</div>
+        <h3>Burglary &amp; Aggravated Property Felonies</h3>
+        <p>Residential and aggravated burglary and related felonies, where the strength of the evidence and the legality of the search are everything.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENCE -->
+<section class="diff">
+  <div class="wrap">
+    <div class="top spine">
+      <p class="eyebrow">The Lahann difference</p>
+      <h2>What thirty-five years actually buys you.</h2>
+    </div>
+    <div class="diff-list">
+      <div class="diff-item">
+        <div class="rule"></div>
+        <h3>Experience that has been here before</h3>
+        <p>Nearly thirty-five years of criminal trials in New Mexico. There is little that surprises this Firm, and that composure is itself a defense.</p>
+      </div>
+      <div class="diff-item">
+        <div class="rule"></div>
+        <h3>The home-court advantage</h3>
+        <p>Based in Las Cruces and practicing throughout southern New Mexico, including the Third Judicial District. We know the local prosecutors, the judges, and how cases really move.</p>
+      </div>
+      <div class="diff-item">
+        <div class="rule"></div>
+        <h3>New Mexico's broader protections</h3>
+        <p>The New Mexico Constitution often protects against unlawful search and seizure more strongly than federal law. We use every protection the state affords.</p>
+      </div>
+      <div class="diff-item">
+        <div class="rule"></div>
+        <h3>You deal with the attorney</h3>
+        <p>This is a focused practice, not a volume mill. Your case is handled by Jeff Lahann directly — with the discretion a serious matter requires.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONVICTION -->
+<section class="conviction">
+  <div class="wrap spine">
+    <blockquote>Aggressive in the courtroom. Honest with you. The State has to earn every conviction — and we make them work for it.</blockquote>
+    <p class="attr"><strong>Jeff Lahann</strong> · Founding Attorney, The Lahann Law Firm</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="spine">
+        <p class="eyebrow on-dark">Speak with us</p>
+        <h2>The sooner you call, the more we can do.</h2>
+        <p class="intro">The most important decisions in a felony case are often made in the first days — before charges are filed, before you talk to anyone. Consultations are confidential. There is no obligation, and no judgment.</p>
+        <p class="privacy">Everything you share is protected and kept in strict confidence. If you have been arrested or believe charges are coming, do not speak to investigators before you speak with counsel.</p>
+      </div>
+      <div class="contact-actions">
+        <div class="line">
+          <span class="k">Call directly</span>
+          <span class="v"><a href="tel:+15755234394">(575) 523-4394</a></span>
+          <span class="note">Confidential. No obligation.</span>
+        </div>
+        <div class="line">
+          <span class="k">Email</span>
+          <span class="v"><a href="mailto:jeff@lahannlaw.com?subject=Confidential%20Felony%20Consultation">jeff@lahannlaw.com</a></span>
+          <span class="note">Confidential. Briefly describe the charge and county.</span>
+        </div>
+        <div class="line">
+          <span class="k">Office</span>
+          <span class="v">Las Cruces, New Mexico</span>
+          <span class="note">Serving Doña Ana County and southern New Mexico.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="disclaimer">
+        © <span id="yr"></span> The Lahann Law Firm, LLC. Southern New Mexico's premier criminal defense firm — Las Cruces, New Mexico.
+        This website is attorney advertising and is for general information only. It does not create an attorney–client relationship and is not legal advice. Prior results do not guarantee a similar outcome.
+      </div>
+      <div><a href="/">lahannlaw.com</a></div>
+    </div>
+  </footer>
+</section>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
