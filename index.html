@@ -10,15 +10,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --gold:#F0A500;
-  --paper:#FAF6EC;
-  --ink:#26201E;
-  --ink-soft:#5C5350;
-  --turq:#C41333;
-  --turq-deep:#9C0E27;
-  --line:#E4D9C6;
-  --card:#FFFFFF;
-  --amber:#8A6410;
+--gold:#F0A500;
+--paper:#FAF6EC;
+--ink:#26201E;
+--ink-soft:#5C5350;
+--turq:#C41333;
+--turq-deep:#9C0E27;
+--line:#E4D9C6;
+--card:#FFFFFF;
+--amber:#8A6410;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -37,7 +37,14 @@ p.lede{color:var(--ink-soft);font-size:1.05rem;max-width:56ch}
 .btn-solid:hover{background:var(--turq-deep)}
 .btn-line{border:1.5px solid var(--ink);color:var(--ink)}
 .btn-line:hover{background:var(--ink);color:#fff}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:#D89400}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+
+/* same-day callout */
+.sameday{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;background:#FFF8E6;border:1.5px solid var(--gold);border-radius:12px;padding:20px 22px;margin-top:22px}
+.sameday p{font-size:.95rem;color:var(--ink-soft);max-width:52ch;margin:0}
+.sameday p b{color:var(--ink)}
 
 /* breaking ribbon */
 .breaking{background:var(--turq-deep);color:#EDF5F3}
@@ -110,8 +117,8 @@ header{border-bottom:1px solid var(--line);position:sticky;top:0;background:var(
 .formcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
 .formcard label{display:block;font-weight:600;font-size:.88rem;margin:16px 0 6px}
 .formcard input,.formcard select,.formcard textarea{
-  width:100%;font-family:inherit;font-size:.95rem;color:var(--ink);
-  background:#FBFAF6;border:1.5px solid var(--line);border-radius:7px;padding:11px 12px;
+width:100%;font-family:inherit;font-size:.95rem;color:var(--ink);
+background:#FBFAF6;border:1.5px solid var(--line);border-radius:7px;padding:11px 12px;
 }
 .formcard input:focus,.formcard select:focus,.formcard textarea:focus{outline:2px solid var(--turq);border-color:var(--turq)}
 .formcard textarea{min-height:110px;resize:vertical}
@@ -128,236 +135,244 @@ footer .cols{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;
 <body>
 
 <div class="breaking">
-  <div class="wrap breaking-inner">
-    <span class="breaking-tag">Breaking</span>
-    <span class="breaking-text">NM Court of Appeals: first-offense DWI deferred sentences that were completed &amp; dismissed may now be expungeable.</span>
-    <a class="breaking-link" href="/quiz.html">Check yours&nbsp;→</a>
-  </div>
+<div class="wrap breaking-inner">
+<span class="breaking-tag">Breaking</span>
+<span class="breaking-text">NM Court of Appeals: first-offense DWI deferred sentences that were completed &amp; dismissed may now be expungeable.</span>
+<a class="breaking-link" href="/quiz.html">Check yours&nbsp;→</a>
+</div>
 </div>
 
 <header>
-  <div class="wrap topbar">
-    <a class="brand" href="/">Expunge <span>New Mexico</span></a>
-    <a class="phone" href="#intake">Free Case Review</a>
-  </div>
+<div class="wrap topbar">
+<a class="brand" href="/">Expunge <span>New Mexico</span></a>
+<a class="phone" href="#intake">Free Case Review</a>
+</div>
 </header>
 
 <section class="hero">
-  <div class="wrap">
-    <div class="eyebrow">New Mexico Criminal Record Expungement · NMSA § 29-3A · All 33 Counties</div>
-    <h1>Your past doesn't have to define your future.</h1>
-    <p class="lede">New Mexico law gives you the right to clear your record. Attorney Jeff Lahann has practiced in New Mexico courtrooms for 35 years — and has handled expungements since the day the Expungement Act took effect. Find out where you stand in about two minutes.</p>
-    <div class="cta-row">
-      <a class="btn btn-solid" href="/quiz.html">Take the Free 2-Minute Quiz</a>
-      <a class="btn btn-line" href="#intake">Get a Free Case Review</a>
-    </div>
-    <div class="trustbar">
-      <span>⚖️ <b>Licensed in NM since 1991</b></span>
-      <span>📜 <b>Expungements since the Act took effect</b> (2020)</span>
-      <span>💳 <b>Flat fees</b> · plans available</span>
-      <span>⏱ <b>Free review</b> — answer in 2 business days</span>
-    </div>
-  </div>
+<div class="wrap">
+<div class="eyebrow">New Mexico Criminal Record Expungement · NMSA § 29-3A · All 33 Counties</div>
+<h1>Your past doesn't have to define your future.</h1>
+<p class="lede">New Mexico law gives you the right to clear your record. Attorney Jeff Lahann has practiced in New Mexico courtrooms for 35 years — and has handled expungements since the day the Expungement Act took effect. Find out where you stand in about two minutes.</p>
+<div class="cta-row">
+<a class="btn btn-solid" href="/quiz.html">Take the Free 2-Minute Quiz</a>
+<a class="btn btn-line" href="#intake">Get a Free Case Review</a>
+<a class="btn btn-gold" href="https://calendly.com/lahann/initial-consultation-criminal-clone" target="_blank" rel="noopener">Can't Wait? Book a Same-Day Call</a>
+</div>
+<div class="trustbar">
+<span>⚖️ <b>Licensed in NM since 1991</b></span>
+<span>📜 <b>Expungements since the Act took effect</b> (2020)</span>
+<span>💳 <b>Flat fees</b> · plans available</span>
+<span>⏱ <b>Free review</b> — answer in 2 business days</span>
+<span>📅 <b>Same-day consultations</b> available</span>
+</div>
+</div>
 </section>
 
 <section>
-  <div class="wrap">
-    <div class="newlaw">
-      <span class="tag">New in 2026</span>
-      <h2>Told your DWI could never come off your record? That answer just changed.</h2>
-      <p>In 2026 the New Mexico Court of Appeals ruled that a first-offense DWI resolved by a successfully completed deferred sentence — and dismissed — may be eligible for expungement under the non-conviction track. Most websites, and plenty of lawyers, are still giving the old answer. If this is your situation, it's worth two minutes to check.</p>
-      <a class="btn btn-solid" href="/quiz.html">See If the New Ruling Applies to You</a>
-    </div>
-  </div>
+<div class="wrap">
+<div class="newlaw">
+<span class="tag">New in 2026</span>
+<h2>Told your DWI could never come off your record? That answer just changed.</h2>
+<p>In 2026 the New Mexico Court of Appeals ruled that a first-offense DWI resolved by a successfully completed deferred sentence — and dismissed — may be eligible for expungement under the non-conviction track. Most websites, and plenty of lawyers, are still giving the old answer. If this is your situation, it's worth two minutes to check.</p>
+<a class="btn btn-solid" href="/quiz.html">See If the New Ruling Applies to You</a>
+</div>
+</div>
 </section>
 
 <section>
-  <div class="wrap">
-    <div class="eyebrow">Two Paths Under the Act</div>
-    <h2>How your case ended decides your track.</h2>
-    <div class="grid2" style="margin-top:18px">
-      <div class="panel">
-        <span class="statute">Non-Conviction · § 29-3A-4</span>
-        <h3>Dismissals, acquittals &amp; discharges</h3>
-        <ul>
-          <li>Court <b>shall</b> grant if requirements are met</li>
-          <li>1-year wait from final disposition</li>
-          <li>Hearing only if an agency objects</li>
-          <li>Includes diversion, conditional discharge &amp; traffic-code deferred sentences</li>
-        </ul>
-      </div>
-      <div class="panel">
-        <span class="statute">Conviction · § 29-3A-5</span>
-        <h3>Guilty pleas &amp; verdicts</h3>
-        <ul>
-          <li>Judge must find <b>justice will be served</b></li>
-          <li>2–10 year wait from sentence completion, by offense level</li>
-          <li>Hearing in every case</li>
-          <li>Some offenses excluded — the quiz screens for them</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="eyebrow">Two Paths Under the Act</div>
+<h2>How your case ended decides your track.</h2>
+<div class="grid2" style="margin-top:18px">
+<div class="panel">
+<span class="statute">Non-Conviction · § 29-3A-4</span>
+<h3>Dismissals, acquittals &amp; discharges</h3>
+<ul>
+<li>Court <b>shall</b> grant if requirements are met</li>
+<li>1-year wait from final disposition</li>
+<li>Hearing only if an agency objects</li>
+<li>Includes diversion, conditional discharge &amp; traffic-code deferred sentences</li>
+</ul>
+</div>
+<div class="panel">
+<span class="statute">Conviction · § 29-3A-5</span>
+<h3>Guilty pleas &amp; verdicts</h3>
+<ul>
+<li>Judge must find <b>justice will be served</b></li>
+<li>2–10 year wait from sentence completion, by offense level</li>
+<li>Hearing in every case</li>
+<li>Some offenses excluded — the quiz screens for them</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 
 <section id="pricing">
-  <div class="wrap">
-    <div class="eyebrow">Transparent Pricing</div>
-    <h2>Two ways to get it done. Both drafted by the attorney.</h2>
-    <p class="lede">No hourly billing, no surprises. Every engagement starts the same way: your official records are pulled and your eligibility is confirmed before anything is drafted.</p>
-    <div class="grid2" style="margin-top:26px">
+<div class="wrap">
+<div class="eyebrow">Transparent Pricing</div>
+<h2>Two ways to get it done. Both drafted by the attorney.</h2>
+<p class="lede">No hourly billing, no surprises. Every engagement starts the same way: your official records are pulled and your eligibility is confirmed before anything is drafted.</p>
+<div class="grid2" style="margin-top:26px">
 
-      <div class="tier">
-        <h3>Drafted &amp; Ready</h3>
-        <div class="price">$1,250 <small>flat fee</small></div>
-        <div class="price-note">plus New Mexico gross receipts tax</div>
-        <div class="sub">$625 to start, $625 when your paperwork is ready. For petitioners comfortable filing themselves — with everything built for them first.</div>
-        <ul>
-          <li>DPS &amp; court records pull — I obtain and verify your record</li>
-          <li>Eligibility confirmed against the actual file, not memory</li>
-          <li>Complete petition package drafted for your specific case</li>
-          <li>Supporting narrative, proposed order &amp; service documents</li>
-          <li>Step-by-step filing guide with agency addresses</li>
-          <li class="na">You handle fingerprints, filing &amp; any hearing yourself</li>
-        </ul>
-        <a class="btn btn-line" href="#intake">Start With the Free Review</a>
-      </div>
+<div class="tier">
+<h3>Drafted &amp; Ready</h3>
+<div class="price">$1,250 <small>flat fee</small></div>
+<div class="price-note">plus New Mexico gross receipts tax</div>
+<div class="sub">$625 to start, $625 when your paperwork is ready. For petitioners comfortable filing themselves — with everything built for them first.</div>
+<ul>
+<li>DPS &amp; court records pull — I obtain and verify your record</li>
+<li>Eligibility confirmed against the actual file, not memory</li>
+<li>Complete petition package drafted for your specific case</li>
+<li>Supporting narrative, proposed order &amp; service documents</li>
+<li>Step-by-step filing guide with agency addresses</li>
+<li class="na">You handle fingerprints, filing &amp; any hearing yourself</li>
+</ul>
+<a class="btn btn-line" href="#intake">Start With the Free Review</a>
+</div>
 
-      <div class="tier rec">
-        <div class="rec-badge">Most Chosen</div>
-        <h3>Full Service</h3>
-        <div class="price">$3,500 <small>non-conviction</small> · $5,000 <small>conviction</small></div>
-        <div class="price-note">plus New Mexico gross receipts tax</div>
-        <div class="sub">Payment plans as low as <b>$250/month for qualifying clients</b>, or a three-payment schedule.</div>
-        <ul>
-          <li>Everything in Drafted &amp; Ready</li>
-          <li>Petition filed in the correct district court</li>
-          <li>Service on DPS, the District Attorney &amp; arresting agency</li>
-          <li>Representation at any hearing — I stand next to you</li>
-          <li>Order served on every agency holding your record</li>
-          <li>Follow-up to confirm the record is actually sealed</li>
-        </ul>
-        <a class="btn btn-solid" href="#intake">Start With the Free Review</a>
-      </div>
+<div class="tier rec">
+<div class="rec-badge">Most Chosen</div>
+<h3>Full Service</h3>
+<div class="price">$3,500 <small>non-conviction</small> · $5,000 <small>conviction</small></div>
+<div class="price-note">plus New Mexico gross receipts tax</div>
+<div class="sub">Payment plans as low as <b>$250/month for qualifying clients</b>, or a three-payment schedule.</div>
+<ul>
+<li>Everything in Drafted &amp; Ready</li>
+<li>Petition filed in the correct district court</li>
+<li>Service on DPS, the District Attorney &amp; arresting agency</li>
+<li>Representation at any hearing — I stand next to you</li>
+<li>Order served on every agency holding your record</li>
+<li>Follow-up to confirm the record is actually sealed</li>
+</ul>
+<a class="btn btn-solid" href="#intake">Start With the Free Review</a>
+</div>
 
-    </div>
-    <p class="finefine">All quoted fees are subject to New Mexico gross receipts tax. Fees are flat rates for typical single-case matters and do not include the district court filing fee (currently $132, waivable for income-qualified petitioners) or third-party costs such as fingerprinting. Multiple cases or counties are quoted in writing before any work begins. Drafted &amp; Ready is a limited-scope engagement billed in two equal payments — $625 to begin work and $625 when your completed petition package is ready; the engagement ends when your package is provided to you and does not include filing, service, or court appearance. Payment plan availability is determined by the third-party lender, not the Firm.</p>
-  </div>
+</div>
+<p class="finefine">All quoted fees are subject to New Mexico gross receipts tax. Fees are flat rates for typical single-case matters and do not include the district court filing fee (currently $132, waivable for income-qualified petitioners) or third-party costs such as fingerprinting. Multiple cases or counties are quoted in writing before any work begins. Drafted &amp; Ready is a limited-scope engagement billed in two equal payments — $625 to begin work and $625 when your completed petition package is ready; the engagement ends when your package is provided to you and does not include filing, service, or court appearance. Payment plan availability is determined by the third-party lender, not the Firm.</p>
+</div>
 </section>
 
 <section>
-  <div class="wrap narrow">
-    <div class="eyebrow">The Process</div>
-    <h2>Three steps. No guesswork.</h2>
-    <div class="steps">
-      <div class="step">
-        <h3>Tell me about your case — in plain language</h3>
-        <p>The free review form asks simple questions. No legal terms needed, no documents required to start. Or take the 2-minute quiz first for an instant read.</p>
-      </div>
-      <div class="step">
-        <h3>I pull your actual record</h3>
-        <p>You don't have to remember every detail. I look up the real case in the court system and check it against the statute — dispositions, dates, and any waiting period.</p>
-      </div>
-      <div class="step">
-        <h3>You get a straight answer in 2 business days</h3>
-        <p>Whether you qualify, which track applies, what it costs, and which option fits. If you don't qualify yet, I'll tell you that too — and when you will.</p>
-      </div>
-    </div>
-  </div>
+<div class="wrap narrow">
+<div class="eyebrow">The Process</div>
+<h2>Three steps. No guesswork.</h2>
+<div class="steps">
+<div class="step">
+<h3>Tell me about your case — in plain language</h3>
+<p>The free review form asks simple questions. No legal terms needed, no documents required to start. Or take the 2-minute quiz first for an instant read.</p>
+</div>
+<div class="step">
+<h3>I pull your actual record</h3>
+<p>You don't have to remember every detail. I look up the real case in the court system and check it against the statute — dispositions, dates, and any waiting period.</p>
+</div>
+<div class="step">
+<h3>You get a straight answer in 2 business days</h3>
+<p>Whether you qualify, which track applies, what it costs, and which option fits. If you don't qualify yet, I'll tell you that too — and when you will. In a hurry? Same-day consultations are available below.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section>
-  <div class="wrap">
-    <div class="eyebrow">Who You're Working With</div>
-    <div class="about">
-      <div>
-        <h2>35 years in New Mexico courtrooms. Expungements since day one of the law.</h2>
-        <p>Jeff Lahann has practiced criminal law in New Mexico <b>since 1991</b> — including roughly 13 years as a Deputy District Attorney before founding The Lahann Law Firm in Las Cruces in 2007. He knows how prosecutors evaluate a case because he spent over a decade doing it.</p>
-        <p>When the Criminal Record Expungement Act took effect in <b>January 2020</b>, the Firm began filing expungement petitions immediately — and has been clearing records across all 33 New Mexico counties ever since. He built expungenewmexico.com because too many people don't know they qualify, or don't know where to start.</p>
-        <div class="credline">
-          <div><b>35</b>Years in NM courts</div>
-          <div><b>33</b>Counties served</div>
-          <div><b>2020</b>Expungements since the Act began</div>
-          <div><b>Flat</b>Fees, in writing</div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="eyebrow">Who You're Working With</div>
+<div class="about">
+<div>
+<h2>35 years in New Mexico courtrooms. Expungements since day one of the law.</h2>
+<p>Jeff Lahann has practiced criminal law in New Mexico <b>since 1991</b> — including roughly 13 years as a Deputy District Attorney before founding The Lahann Law Firm in Las Cruces in 2007. He knows how prosecutors evaluate a case because he spent over a decade doing it.</p>
+<p>When the Criminal Record Expungement Act took effect in <b>January 2020</b>, the Firm began filing expungement petitions immediately — and has been clearing records across all 33 New Mexico counties ever since. He built expungenewmexico.com because too many people don't know they qualify, or don't know where to start.</p>
+<div class="credline">
+<div><b>35</b>Years in NM courts</div>
+<div><b>33</b>Counties served</div>
+<div><b>2020</b>Expungements since the Act began</div>
+<div><b>Flat</b>Fees, in writing</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <section id="intake">
-  <div class="wrap narrow">
-    <div class="eyebrow">Free Case Review</div>
-    <h2>Submit your case.</h2>
-    <p class="lede">Answer as best you can — "I don't know" is a fine answer. Attorney Lahann will look up your actual record and contact you within 2 business days with a clear eligibility determination.</p>
+<div class="wrap narrow">
+<div class="eyebrow">Free Case Review</div>
+<h2>Submit your case.</h2>
+<p class="lede">Answer as best you can — "I don't know" is a fine answer. Attorney Lahann will look up your actual record and contact you within 2 business days with a clear eligibility determination.</p>
 
-    <form class="formcard" action="https://api.web3forms.com/submit" method="POST" style="margin-top:22px">
-      <input type="hidden" name="access_key" value="74221f52-d30c-4d55-8ccf-240b7c82bfa4">
-      <input type="hidden" name="subject" value="New Expungement Case Review — expungenewmexico.com">
-      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+<div class="sameday">
+<p><b>Can't wait two days?</b> Book a same-day phone consultation at no cost — pick a time that works and Attorney Lahann will call you directly.</p>
+<a class="btn btn-gold" href="https://calendly.com/lahann/initial-consultation-criminal-clone" target="_blank" rel="noopener">Book a Same-Day Consultation</a>
+</div>
 
-      <label for="f-name">Full name</label>
-      <input id="f-name" type="text" name="name" required autocomplete="name">
+<form class="formcard" action="https://api.web3forms.com/submit" method="POST" style="margin-top:22px">
+<input type="hidden" name="access_key" value="74221f52-d30c-4d55-8ccf-240b7c82bfa4">
+<input type="hidden" name="subject" value="New Expungement Case Review — expungenewmexico.com">
+<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
-      <label for="f-phone">Phone</label>
-      <input id="f-phone" type="tel" name="phone" required autocomplete="tel">
+<label for="f-name">Full name</label>
+<input id="f-name" type="text" name="name" required autocomplete="name">
 
-      <label for="f-email">Email</label>
-      <input id="f-email" type="email" name="email" required autocomplete="email">
+<label for="f-phone">Phone</label>
+<input id="f-phone" type="tel" name="phone" required autocomplete="tel">
 
-      <label for="f-county">County where the case happened</label>
-      <select id="f-county" name="county" required>
-        <option value="" disabled selected>Select a county</option>
-        <option>Bernalillo</option><option>Catron</option><option>Chaves</option>
-        <option>Cibola</option><option>Colfax</option><option>Curry</option>
-        <option>De Baca</option><option>Doña Ana</option><option>Eddy</option>
-        <option>Grant</option><option>Guadalupe</option><option>Harding</option>
-        <option>Hidalgo</option><option>Lea</option><option>Lincoln</option>
-        <option>Los Alamos</option><option>Luna</option><option>McKinley</option>
-        <option>Mora</option><option>Otero</option><option>Quay</option>
-        <option>Rio Arriba</option><option>Roosevelt</option><option>San Juan</option>
-        <option>San Miguel</option><option>Sandoval</option><option>Santa Fe</option>
-        <option>Sierra</option><option>Socorro</option><option>Taos</option>
-        <option>Torrance</option><option>Union</option><option>Valencia</option>
-        <option>Not sure / multiple counties</option>
-      </select>
+<label for="f-email">Email</label>
+<input id="f-email" type="email" name="email" required autocomplete="email">
 
-      <label for="f-outcome">How did the case end?</label>
-      <select id="f-outcome" name="how_case_ended" required>
-        <option value="" disabled selected>Pick the closest answer</option>
-        <option>Dismissed / charges dropped</option>
-        <option>Acquitted (found not guilty)</option>
-        <option>Diversion or conditional discharge</option>
-        <option>Deferred sentence (completed &amp; dismissed)</option>
-        <option>Guilty plea or guilty verdict</option>
-        <option>Arrested but never charged</option>
-        <option>I'm not sure</option>
-      </select>
+<label for="f-county">County where the case happened</label>
+<select id="f-county" name="county" required>
+<option value="" disabled selected>Select a county</option>
+<option>Bernalillo</option><option>Catron</option><option>Chaves</option>
+<option>Cibola</option><option>Colfax</option><option>Curry</option>
+<option>De Baca</option><option>Doña Ana</option><option>Eddy</option>
+<option>Grant</option><option>Guadalupe</option><option>Harding</option>
+<option>Hidalgo</option><option>Lea</option><option>Lincoln</option>
+<option>Los Alamos</option><option>Luna</option><option>McKinley</option>
+<option>Mora</option><option>Otero</option><option>Quay</option>
+<option>Rio Arriba</option><option>Roosevelt</option><option>San Juan</option>
+<option>San Miguel</option><option>Sandoval</option><option>Santa Fe</option>
+<option>Sierra</option><option>Socorro</option><option>Taos</option>
+<option>Torrance</option><option>Union</option><option>Valencia</option>
+<option>Not sure / multiple counties</option>
+</select>
 
-      <label for="f-details">Anything else you can tell me (charges, rough dates, case number if you have it)</label>
-      <textarea id="f-details" name="details" placeholder="Example: possession charge in Las Cruces around 2015, I think it was dismissed…"></textarea>
+<label for="f-outcome">How did the case end?</label>
+<select id="f-outcome" name="how_case_ended" required>
+<option value="" disabled selected>Pick the closest answer</option>
+<option>Dismissed / charges dropped</option>
+<option>Acquitted (found not guilty)</option>
+<option>Diversion or conditional discharge</option>
+<option>Deferred sentence (completed &amp; dismissed)</option>
+<option>Guilty plea or guilty verdict</option>
+<option>Arrested but never charged</option>
+<option>I'm not sure</option>
+</select>
 
-      <button class="btn btn-solid" type="submit">Send My Free Case Review</button>
-      <p class="form-note">Confidential. Submitting this form does not create an attorney-client relationship, but everything you send is treated as confidential. No obligation, ever.</p>
-    </form>
-  </div>
+<label for="f-details">Anything else you can tell me (charges, rough dates, case number if you have it)</label>
+<textarea id="f-details" name="details" placeholder="Example: possession charge in Las Cruces around 2015, I think it was dismissed…"></textarea>
+
+<button class="btn btn-solid" type="submit">Send My Free Case Review</button>
+<p class="form-note">Confidential. Submitting this form does not create an attorney-client relationship, but everything you send is treated as confidential. No obligation, ever.</p>
+</form>
+</div>
 </section>
 
 <footer>
-  <div class="wrap">
-    <div class="cols">
-      <div>
-        <b>The Lahann Law Firm, LLC</b><br>
-        1990 E. Lohman Ave, Ste 213<br>
-        Las Cruces, New Mexico
-      </div>
-      <div>
-        <a href="mailto:jeff@expungenewmexico.com">jeff@expungenewmexico.com</a><br>
-        <a href="/quiz.html">Free Eligibility Quiz</a>
-      </div>
-    </div>
-    <p class="disclaimer">This website provides general information about New Mexico expungement law and does not constitute legal advice. Eligibility depends on the specific facts of each case and your official records. Contacting The Lahann Law Firm through this website does not create an attorney-client relationship. Flat fees and payment plan availability as described above; payment plans are provided by a third-party lender and subject to approval. Past results do not guarantee future outcomes. Attorney Jeff Lahann is licensed in New Mexico. © 2026 The Lahann Law Firm, LLC. All rights reserved. Attorney advertising.</p>
-  </div>
+<div class="wrap">
+<div class="cols">
+<div>
+<b>The Lahann Law Firm, LLC</b><br>
+1990 E. Lohman Ave, Ste 213<br>
+Las Cruces, New Mexico
+</div>
+<div>
+<a href="mailto:jeff@expungenewmexico.com">jeff@expungenewmexico.com</a><br>
+<a href="/quiz.html">Free Eligibility Quiz</a><br>
+<a href="https://calendly.com/lahann/initial-consultation-criminal-clone" target="_blank" rel="noopener">Book a Same-Day Consultation</a>
+</div>
+</div>
+<p class="disclaimer">This website provides general information about New Mexico expungement law and does not constitute legal advice. Eligibility depends on the specific facts of each case and your official records. Contacting The Lahann Law Firm through this website does not create an attorney-client relationship. Flat fees and payment plan availability as described above; payment plans are provided by a third-party lender and subject to approval. Past results do not guarantee future outcomes. Attorney Jeff Lahann is licensed in New Mexico. © 2026 The Lahann Law Firm, LLC. All rights reserved. Attorney advertising.</p>
+</div>
 </footer>
 
 </body>
