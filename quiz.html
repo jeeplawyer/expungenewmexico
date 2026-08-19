@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free NM Expungement Eligibility Quiz | Expunge New Mexico</title>
+<meta name="description" content="Find out in about 2 minutes whether your New Mexico record can be expunged under NMSA § 29-3A. Free, confidential, no email required. Built by a 35-year New Mexico attorney.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#F0A500;
+  --paper:#FAF6EC;
+  --ink:#26201E;
+  --ink-soft:#5C5350;
+  --turq:#C41333;
+  --turq-deep:#9C0E27;
+  --line:#E4D9C6;
+  --card:#FFFFFF;
+  --stamp-green:#1F7A45;
+  --stamp-red:#9A3B2E;
+  --stamp-amber:#8A6410;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Public Sans',system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--turq-deep)}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+
+/* header */
+header{
+  border-bottom:1px solid var(--line);
+  background:var(--paper);
+}
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 0;
+}
+.brand{
+  font-family:'Zilla Slab',serif;font-weight:700;font-size:1.05rem;
+  color:var(--ink);text-decoration:none;letter-spacing:.01em;
+}
+.brand span{color:var(--turq)}
+.phone{
+  font-weight:600;font-size:.9rem;text-decoration:none;color:var(--ink);
+  border:1px solid var(--line);border-radius:6px;padding:7px 12px;background:#fff;
+}
+.phone:hover{border-color:var(--turq)}
+
+/* hero */
+.hero{padding:44px 0 28px;text-align:left}
+.eyebrow{
+  font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--turq-deep);margin-bottom:10px;
+}
+h1{
+  font-family:'Zilla Slab',serif;font-weight:700;
+  font-size:clamp(1.7rem,5.5vw,2.4rem);line-height:1.15;margin-bottom:12px;
+}
+.hero p{color:var(--ink-soft);font-size:1rem;max-width:52ch}
+.hero .meta{
+  margin-top:16px;font-size:.82rem;color:var(--ink-soft);
+  display:flex;gap:16px;flex-wrap:wrap;
+}
+.hero .meta b{color:var(--ink)}
+
+/* quiz card — file-folder aesthetic */
+.file{
+  margin:26px 0 40px;position:relative;
+}
+.file-tab{
+  display:inline-block;background:var(--ink);color:#F4F1E8;
+  font-family:'Zilla Slab',serif;font-weight:600;font-size:.8rem;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:7px 18px 6px;border-radius:8px 8px 0 0;
+}
+.card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:0 10px 10px 10px;
+  box-shadow:0 2px 10px rgba(28,37,48,.06);
+  padding:28px 26px 30px;
+}
+.progress-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-size:.78rem;color:var(--ink-soft);margin-bottom:8px;
+}
+.progress-track{
+  height:3px;background:var(--line);border-radius:2px;overflow:hidden;margin-bottom:24px;
+}
+.progress-fill{
+  height:100%;background:var(--turq);width:0%;
+  transition:width .35s ease;
+}
+.q-text{
+  font-family:'Zilla Slab',serif;font-weight:600;
+  font-size:1.3rem;line-height:1.3;margin-bottom:6px;
+}
+.q-help{font-size:.9rem;color:var(--ink-soft);margin-bottom:20px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{
+  text-align:left;background:#FBFAF6;border:1.5px solid var(--line);
+  border-radius:8px;padding:14px 16px;cursor:pointer;
+  font-family:inherit;font-size:.98rem;color:var(--ink);
+  transition:border-color .15s ease, background .15s ease;
+  width:100%;
+}
+.opt b{display:block;font-weight:600}
+.opt small{display:block;color:var(--ink-soft);font-size:.83rem;margin-top:2px}
+.opt:hover{border-color:var(--turq);background:#fff}
+.opt:focus-visible{outline:3px solid var(--turq);outline-offset:2px}
+.backlink{
+  margin-top:20px;background:none;border:none;color:var(--ink-soft);
+  font-size:.85rem;cursor:pointer;text-decoration:underline;font-family:inherit;
+  padding:4px 0;
+}
+.backlink:hover{color:var(--ink)}
+
+/* result */
+.stamp{
+  display:inline-block;
+  border:3px solid var(--stamp-green);color:var(--stamp-green);
+  font-family:'Zilla Slab',serif;font-weight:700;font-size:1.15rem;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:8px 18px;border-radius:6px;
+  transform:rotate(-2.5deg);
+  margin-bottom:18px;
+  -webkit-mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='60'><filter id='n'><feTurbulence baseFrequency='0.7' numOctaves='2'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.92 0.08'/></filter><rect width='120' height='60' filter='url(%23n)'/></svg>");
+  mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='60'><filter id='n'><feTurbulence baseFrequency='0.7' numOctaves='2'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0.92 0.08'/></filter><rect width='120' height='60' filter='url(%23n)'/></svg>");
+}
+.stamp.red{border-color:var(--stamp-red);color:var(--stamp-red);transform:rotate(2deg)}
+.stamp.amber{border-color:var(--stamp-amber);color:var(--stamp-amber);transform:rotate(-1.5deg)}
+.r-title{
+  font-family:'Zilla Slab',serif;font-weight:700;font-size:1.45rem;
+  line-height:1.25;margin-bottom:10px;
+}
+.r-body{color:var(--ink-soft);font-size:.97rem;margin-bottom:8px}
+.r-body b{color:var(--ink)}
+.statute{
+  display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.06em;
+  color:var(--turq-deep);background:#FAE7EA;border-radius:5px;
+  padding:4px 10px;margin:6px 0 14px;
+}
+.verify-note{
+  font-size:.85rem;color:var(--ink-soft);border-left:3px solid var(--line);
+  padding:6px 0 6px 14px;margin:14px 0 4px;
+}
+
+/* tier cards inside result */
+.tiers{display:flex;flex-direction:column;gap:12px;margin:20px 0 6px}
+.tier{
+  border:1.5px solid var(--line);border-radius:10px;padding:18px;
+  background:#FBFAF6;position:relative;
+}
+.tier.rec{border-color:var(--turq);background:#fff}
+.rec-badge{
+  position:absolute;top:-10px;left:16px;background:var(--gold);color:var(--ink);
+  font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 10px;border-radius:20px;
+}
+.tier h3{font-family:'Zilla Slab',serif;font-size:1.08rem;font-weight:600;margin-bottom:2px}
+.tier .price{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.3rem;margin:2px 0 8px}
+.tier .price small{font-family:'Public Sans',sans-serif;font-weight:500;font-size:.78rem;color:var(--ink-soft)}
+.tier p{font-size:.88rem;color:var(--ink-soft);margin-bottom:12px}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:600;font-size:.92rem;
+  border-radius:7px;padding:11px 18px;text-align:center;
+}
+.btn-solid{background:var(--turq);color:#fff}
+.btn-solid:hover{background:var(--turq-deep)}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.restart{margin-top:22px}
+
+.disclaimer{
+  font-size:.75rem;color:var(--ink-soft);padding:26px 0 44px;
+  border-top:1px solid var(--line);
+}
+footer .wrap{padding-top:0}
+@media (prefers-reduced-motion: reduce){
+  .progress-fill{transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="/">Expunge <span>New Mexico</span></a>
+    <a class="phone" href="/#intake">Free Case Review</a>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <div class="eyebrow">Free Eligibility Check · NMSA § 29-3A</div>
+  <h1>Can your New Mexico record be expunged?</h1>
+  <p>Answer a few plain-language questions and get a straight answer — likely eligible, not yet, or needs a closer look — plus exactly what to do next.</p>
+  <div class="meta">
+    <span><b>~2 minutes</b> · 8 questions max</span>
+    <span><b>No email required</b> to see your result</span>
+    <span>Built by a <b>35-year NM attorney</b></span>
+  </div>
+</section>
+
+<main class="wrap">
+  <div class="file">
+    <div class="file-tab">Case Review · Confidential</div>
+    <div class="card" id="card" aria-live="polite">
+      <!-- injected by JS -->
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap disclaimer">
+    This quiz provides general information about the New Mexico Criminal Record Expungement Act, NMSA 1978, §§ 29-3A-1 to -9. It is not legal advice, results are not a guarantee of eligibility, and using this tool does not create an attorney-client relationship. Eligibility depends on the specific facts of your case and your official court and arrest records. The Lahann Law Firm, LLC · Las Cruces, New Mexico · <a href="mailto:jeff@expungenewmexico.com">jeff@expungenewmexico.com</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- waiting periods (years, from completion of sentence) ---------- */
+var WAITS = { misd:2, f4:4, f3:6, f2:8, f1:10, dv:10 };
+var WAIT_LABEL = { misd:"2 years", f4:"4 years", f3:"6 years", f2:"8 years", f1:"10 years", dv:"10 years" };
+/* elapsed ranges map to a minimum-years-elapsed value */
+var ELAPSED = { lt1:0, y1:1, y2:2, y4:4, y6:6, y8:8, y10:10 };
+
+var state = { step:0, path:[], unsure:false, offense:null, elapsed:null };
+
+var QUESTIONS = {
+
+  q1:{
+    text:"Do you currently have any pending criminal charges?",
+    help:"Anywhere — New Mexico or any other state. An open case blocks expungement until it's resolved.",
+    opts:[
+      {label:"No", sub:"No open cases anywhere right now", next:"q2"},
+      {label:"Yes", sub:"I have at least one open case", result:"pending"},
+      {label:"I'm not sure", sub:"There may be something I don't know about", next:"q2", unsure:true}
+    ]
+  },
+
+  q2:{
+    text:"Where did the case you want cleared happen?",
+    help:"The New Mexico Expungement Act only covers New Mexico state, county, municipal, and tribal-adjacent state charges — not federal cases or other states' cases.",
+    opts:[
+      {label:"New Mexico state, county, or city court", next:"q3"},
+      {label:"Federal court", result:"outofscope"},
+      {label:"Another state", result:"outofscope"},
+      {label:"I'm not sure", next:"q3", unsure:true}
+    ]
+  },
+
+  q3:{
+    text:"How did the case end?",
+    help:"Pick the closest answer. If you're not sure, that's normal — court paperwork is confusing, and we can pull your actual record.",
+    opts:[
+      {label:"Dismissed, acquitted, or never charged", sub:"Charges dropped, nolle prosequi, found not guilty, or arrested but never prosecuted", next:"q4nc"},
+      {label:"Diversion or conditional discharge", sub:"You completed a program and the case closed without a conviction", next:"q4nc"},
+      {label:"Guilty plea or guilty verdict", sub:"Including a deferred sentence you completed", next:"q4c"},
+      {label:"I honestly don't know", sub:"It was a long time ago / the paperwork was confusing", result:"review"}
+    ]
+  },
+
+  /* ---- non-conviction track ---- */
+  q4nc:{
+    text:"Has it been at least 1 year since the case ended?",
+    help:"For non-convictions, the waiting period is 1 year from the final disposition — the date the case officially closed.",
+    opts:[
+      {label:"Yes, more than a year ago", result:"greenNC"},
+      {label:"No, less than a year", result:"notyetNC"},
+      {label:"I'm not sure of the date", result:"greenNCverify", unsure:true}
+    ]
+  },
+
+  /* ---- conviction track ---- */
+  q4c:{
+    text:"What was the conviction for?",
+    help:"Some offense types can't be expunged under New Mexico law no matter how much time has passed. Pick the closest category.",
+    opts:[
+      {label:"DWI / DUI", next:"q4dwi"},
+      {label:"A sex offense", result:"blocked"},
+      {label:"An offense against a child", result:"blocked"},
+      {label:"An offense causing great bodily harm or death", result:"blocked"},
+      {label:"Embezzlement", result:"review"},
+      {label:"Domestic violence", next:"q5c", offense:"dv"},
+      {label:"Something else", next:"q4c2"}
+    ]
+  },
+
+  q4dwi:{
+    text:"Was it a first-offense DWI resolved with a deferred sentence that was later dismissed?",
+    help:"This matters because of a 2026 New Mexico Court of Appeals decision. If you completed the First Offender Program and the case was dismissed, the answer may have just changed in your favor.",
+    opts:[
+      {label:"Yes — deferred sentence, completed, then dismissed", result:"dwiDeferred"},
+      {label:"No — it was a straight conviction", result:"blocked"},
+      {label:"I'm not sure how it ended", result:"dwiDeferred", unsure:true}
+    ]
+  },
+
+  q4c2:{
+    text:"What level was the offense?",
+    help:"This sets your waiting period. It's usually on your Judgment &amp; Sentence — but if you don't have it, guess and we'll verify.",
+    opts:[
+      {label:"Misdemeanor", sub:"2-year waiting period", next:"q5c", offense:"misd"},
+      {label:"Fourth-degree felony", sub:"4-year waiting period", next:"q5c", offense:"f4"},
+      {label:"Third-degree felony", sub:"6-year waiting period", next:"q5c", offense:"f3"},
+      {label:"Second-degree felony", sub:"8-year waiting period", next:"q5c", offense:"f2"},
+      {label:"First-degree felony", sub:"10-year waiting period", next:"q5c", offense:"f1"},
+      {label:"I'm not sure", next:"q5c", offense:"misd", unsure:true}
+    ]
+  },
+
+  q5c:{
+    text:"Is your sentence completely finished?",
+    help:"That means probation and parole are done AND all fines and fees are paid. The waiting-period clock doesn't start until everything is complete.",
+    opts:[
+      {label:"Yes — everything is done and paid", next:"q6c"},
+      {label:"No — still on probation/parole or still owe fines", result:"notyetSentence"},
+      {label:"I'm not sure", next:"q6c", unsure:true}
+    ]
+  },
+
+  q6c:{
+    text:"How long since you finished everything?",
+    help:"Since the LAST thing completed — final probation day or final payment, whichever came later.",
+    opts:[
+      {label:"Less than 2 years", elapsed:"y1", next:"q7c"},
+      {label:"2–4 years", elapsed:"y2", next:"q7c"},
+      {label:"4–6 years", elapsed:"y4", next:"q7c"},
+      {label:"6–8 years", elapsed:"y6", next:"q7c"},
+      {label:"8–10 years", elapsed:"y8", next:"q7c"},
+      {label:"More than 10 years", elapsed:"y10", next:"q7c"}
+    ]
+  },
+
+  q7c:{
+    text:"Any other convictions since then?",
+    help:"The judge must find that \"justice will be served\" by expunging your record. A clean stretch since the case is the strongest fact in your favor.",
+    opts:[
+      {label:"No — nothing since", result:"convictionResult"},
+      {label:"Yes", result:"review"},
+      {label:"I'm not sure", result:"convictionResult", unsure:true}
+    ]
+  }
+};
+
+/* total steps for progress display (longest path) */
+var TOTAL = 7;
+
+/* ---------- results ---------- */
+function tierBlock(recommend){
+  var t1rec = recommend === "t1";
+  var t2rec = recommend === "t2";
+  return '' +
+  '<div class="tiers">' +
+    '<div class="tier' + (t1rec ? ' rec' : '') + '">' +
+      (t1rec ? '<div class="rec-badge">Best fit for your case</div>' : '') +
+      '<h3>Drafted &amp; Ready</h3>' +
+      '<div class="price">$1,250 <small>flat · paid at purchase</small></div>' +
+      '<p>Attorney Lahann pulls your record, confirms eligibility, and drafts your complete petition package — petition, supporting narrative, proposed order, and service documents — with a step-by-step filing guide. You file it and finish it yourself.</p>' +
+      '<a class="btn btn-solid" href="/#pricing">Start Drafted &amp; Ready</a>' +
+    '</div>' +
+    '<div class="tier' + (t2rec ? ' rec' : '') + '">' +
+      (t2rec ? '<div class="rec-badge">Best fit for your case</div>' : '') +
+      '<h3>Full Service</h3>' +
+      '<div class="price">$3,500 / $5,000 <small>non-conviction / conviction · plans as low as $250/mo for qualifying clients</small></div>' +
+      '<p>Everything handled start to finish — records, drafting, filing, serving every required agency, and standing next to you at any hearing. You never touch a courthouse.</p>' +
+      '<a class="btn btn-solid" href="/#pricing">Start Full Service</a>' +
+    '</div>' +
+  '</div>';
+}
+
+function verifyNote(){
+  if(!state.unsure) return "";
+  return '<div class="verify-note">You answered "not sure" to at least one question — that\'s completely normal. Every engagement starts with pulling your official record, so your answers get verified against the actual court file before anything is drafted.</div>';
+}
+
+var RESULTS = {
+
+  greenNC: function(){
+    return {
+      stamp:'<span class="stamp">Likely Eligible</span>',
+      html:
+      '<h2 class="r-title">Your case is on the strongest track in the statute.</h2>' +
+      '<span class="statute">Non-Conviction Track · NMSA § 29-3A-4</span>' +
+      '<p class="r-body">For cases that ended without a conviction, the law says the court <b>shall</b> grant expungement once the requirements are met — it\'s not left to the judge\'s discretion. Your 1-year waiting period appears satisfied. A hearing usually isn\'t even required unless an agency objects.</p>' +
+      verifyNote() +
+      tierBlock("t1") +
+      '<p class="r-body" style="margin-top:10px">On this track, most petitioners never see a courtroom — which is why the Drafted &amp; Ready option covers most non-conviction cases.</p>' +
+      ctas()
+    };
+  },
+
+  greenNCverify: function(){
+    var r = RESULTS.greenNC();
+    return r;
+  },
+
+  convictionResult: function(){
+    var need = WAITS[state.offense || "misd"];
+    var have = ELAPSED[state.elapsed || "lt1"];
+    if(have < need){ return RESULTS.notyetWait(); }
+    return {
+      stamp:'<span class="stamp">Likely Eligible</span>',
+      html:
+      '<h2 class="r-title">You appear to qualify — on the track that requires a hearing.</h2>' +
+      '<span class="statute">Conviction Track · NMSA § 29-3A-5</span>' +
+      '<p class="r-body">Your waiting period (<b>' + WAIT_LABEL[state.offense || "misd"] + '</b> from sentence completion) appears satisfied. On this track the judge holds a hearing in every case and must find that <b>justice will be served</b> by expungement — so the petition\'s written argument and the hearing itself are where these cases are won.</p>' +
+      verifyNote() +
+      tierBlock("t2") +
+      '<p class="r-body" style="margin-top:10px">Drafted &amp; Ready is available for conviction cases too — but be aware you\'d attend the mandatory hearing on your own. Most conviction-track clients choose Full Service for exactly that reason.</p>' +
+      ctas()
+    };
+  },
+
+  dwiDeferred: function(){
+    return {
+      stamp:'<span class="stamp amber">New Law May Apply</span>',
+      html:
+      '<h2 class="r-title">Your DWI may now be expungeable — under a 2026 appellate decision.</h2>' +
+      '<span class="statute">Non-Conviction Track · NMSA § 29-3A-4 · <i>In re C.T.</i> (N.M. Ct. App. 2026)</span>' +
+      '<p class="r-body">For years the conventional answer was that DWI could never be expunged. In 2026 the New Mexico Court of Appeals held that a <b>first DWI resolved by a successfully completed deferred sentence and dismissed</b> can qualify under the non-conviction track. Most attorneys — and most websites — are still giving the old answer.</p>' +
+      '<p class="r-body"><b>Fair warning:</b> DPS and District Attorneys fought this ruling and these petitions can still draw objections and a contested hearing. This is not a fill-in-the-blanks case — it\'s one where having a 35-year courtroom attorney standing next to you matters.</p>' +
+      verifyNote() +
+      tierBlock("t2") +
+      ctas()
+    };
+  },
+
+  notyetWait: function(){
+    return {
+      stamp:'<span class="stamp amber">Not Yet</span>',
+      html:
+      '<h2 class="r-title">You\'re on a valid track — the clock just hasn\'t run.</h2>' +
+      '<span class="statute">Conviction Track · NMSA § 29-3A-5</span>' +
+      '<p class="r-body">Based on your answers, your offense carries a <b>' + WAIT_LABEL[state.offense || "misd"] + '</b> waiting period from the day your sentence was fully complete — probation done and every fine paid. It looks like you\'re not quite there yet.</p>' +
+      '<p class="r-body"><b>Worth a free check anyway:</b> the exact completion date on your record controls, and people are often further along than they think. A records pull settles it.</p>' +
+      ctas(true)
+    };
+  },
+
+  notyetNC: function(){
+    return {
+      stamp:'<span class="stamp amber">Not Yet</span>',
+      html:
+      '<h2 class="r-title">Almost — the 1-year clock is still running.</h2>' +
+      '<span class="statute">Non-Conviction Track · NMSA § 29-3A-4</span>' +
+      '<p class="r-body">Non-conviction cases have a 1-year waiting period from final disposition. Once that year passes, yours is the strongest kind of petition in the statute — the court <b>shall</b> grant it if the requirements are met.</p>' +
+      '<p class="r-body"><b>Smart move now:</b> get the free case review so the exact disposition date is confirmed. Then file the week you\'re eligible instead of guessing.</p>' +
+      ctas(true)
+    };
+  },
+
+  notyetSentence: function(){
+    return {
+      stamp:'<span class="stamp amber">Not Yet</span>',
+      html:
+      '<h2 class="r-title">Finish the sentence first — then the clock starts.</h2>' +
+      '<span class="statute">Conviction Track · NMSA § 29-3A-5</span>' +
+      '<p class="r-body">The waiting period doesn\'t begin until probation and parole are done and every fine and fee is paid. Unpaid fines are the most common hidden clock-stopper — some people are years behind where they think they are for a balance they forgot existed.</p>' +
+      '<p class="r-body"><b>Next step:</b> confirm exactly what\'s outstanding. The free case review includes checking your balance and completion status so you know your real date.</p>' +
+      ctas(true)
+    };
+  },
+
+  blocked: function(){
+    return {
+      stamp:'<span class="stamp red">Not Eligible</span>',
+      html:
+      '<h2 class="r-title">New Mexico law doesn\'t allow expungement for this conviction.</h2>' +
+      '<span class="statute">NMSA § 29-3A-5</span>' +
+      '<p class="r-body">The Expungement Act excludes certain convictions no matter how much time has passed — including DWI, sex offenses, offenses against children, and offenses causing great bodily harm or death. That\'s a straight answer, and it\'s the honest one.</p>' +
+      '<p class="r-body"><b>Two things worth knowing:</b> if you have <i>other</i> cases on your record — especially dismissals or lesser charges — those may still be expungeable individually. And the statute has been amended before; the law can change.</p>' +
+      ctas(true)
+    };
+  },
+
+  review: function(){
+    return {
+      stamp:'<span class="stamp amber">Needs a Closer Look</span>',
+      html:
+      '<h2 class="r-title">Your case needs a real record pull before anyone can say.</h2>' +
+      '<p class="r-body">Based on your answers, eligibility turns on details that only your official court and arrest records can settle — exact dispositions, offense classifications, or dates. Guessing wrong costs a $132 filing fee and months of waiting on a petition that bounces.</p>' +
+      '<p class="r-body"><b>This is exactly what the free case review is for.</b> Attorney Lahann looks up your actual case in the court system — you don\'t have to remember every detail — and you get a clear answer within 2 business days.</p>' +
+      ctas(true)
+    };
+  },
+
+  pending: function(){
+    return {
+      stamp:'<span class="stamp red">Not Yet</span>',
+      html:
+      '<h2 class="r-title">Open charges have to be resolved first.</h2>' +
+      '<p class="r-body">The court won\'t expunge records while you have pending criminal proceedings. Once the open case is resolved, come back — depending on how it ends, it may even be expungeable itself one day.</p>' +
+      '<p class="r-body">If you want to plan ahead, the free case review can map out what your record will look like and what becomes eligible when.</p>' +
+      ctas(true)
+    };
+  },
+
+  outofscope: function(){
+    return {
+      stamp:'<span class="stamp red">Different Law Applies</span>',
+      html:
+      '<h2 class="r-title">The New Mexico Act only reaches New Mexico cases.</h2>' +
+      '<p class="r-body">Federal convictions and other states\' cases are governed by federal law or that state\'s own expungement statute — New Mexico courts can\'t seal them.</p>' +
+      '<p class="r-body">If you <i>also</i> have New Mexico cases on your record, those may still qualify. Retake the quiz for the New Mexico case, or submit the free review and we\'ll sort out which is which.</p>' +
+      ctas(true)
+    };
+  }
+};
+
+function ctas(reviewPrimary){
+  return '<div class="cta-row">' +
+    '<a class="btn ' + (reviewPrimary ? 'btn-solid' : 'btn-line') + '" href="/#intake">Get the Free Case Review</a>' +
+    '<a class="btn btn-line" href="mailto:jeff@expungenewmexico.com">Email Attorney Lahann</a>' +
+  '</div>' +
+  '<button class="backlink restart" onclick="EQ.restart()">Start the quiz over</button>';
+}
+
+/* ---------- engine ---------- */
+var card = document.getElementById("card");
+
+function render(qid){
+  var q = QUESTIONS[qid];
+  var stepNum = state.path.length + 1;
+  var pct = Math.min(95, Math.round((state.path.length / TOTAL) * 100));
+  var html =
+    '<div class="progress-row"><span>Question ' + stepNum + '</span><span>~2 minutes total</span></div>' +
+    '<div class="progress-track"><div class="progress-fill" style="width:' + pct + '%"></div></div>' +
+    '<div class="q-text">' + q.text + '</div>' +
+    '<div class="q-help">' + q.help + '</div>' +
+    '<div class="opts" role="group">';
+  q.opts.forEach(function(o, i){
+    html += '<button class="opt" onclick="EQ.answer(\'' + qid + '\',' + i + ')">' +
+      '<b>' + o.label + '</b>' + (o.sub ? '<small>' + o.sub + '</small>' : '') +
+    '</button>';
+  });
+  html += '</div>';
+  if(state.path.length > 0){
+    html += '<button class="backlink" onclick="EQ.back()">&larr; Back</button>';
+  }
+  card.innerHTML = html;
+}
+
+function showResult(key){
+  var r = RESULTS[key]();
+  var pct = 100;
+  card.innerHTML =
+    '<div class="progress-row"><span>Result</span><span>&nbsp;</span></div>' +
+    '<div class="progress-track"><div class="progress-fill" style="width:' + pct + '%"></div></div>' +
+    r.stamp + r.html;
+  card.scrollIntoView({behavior:"smooth", block:"start"});
+}
+
+window.EQ = {
+  answer: function(qid, i){
+    var o = QUESTIONS[qid].opts[i];
+    state.path.push({qid:qid, opt:i});
+    if(o.unsure) state.unsure = true;
+    if(o.offense) state.offense = o.offense;
+    if(o.elapsed) state.elapsed = o.elapsed;
+    if(o.result){ showResult(o.result); }
+    else { render(o.next); }
+  },
+  back: function(){
+    state.path.pop();
+    /* rebuild state flags from scratch */
+    var saved = state.path.slice();
+    state = { step:0, path:[], unsure:false, offense:null, elapsed:null };
+    var qid = "q1";
+    saved.forEach(function(step){
+      var o = QUESTIONS[step.qid].opts[step.opt];
+      state.path.push(step);
+      if(o.unsure) state.unsure = true;
+      if(o.offense) state.offense = o.offense;
+      if(o.elapsed) state.elapsed = o.elapsed;
+      qid = o.next || qid;
+    });
+    render(state.path.length ? qid : "q1");
+  },
+  restart: function(){
+    state = { step:0, path:[], unsure:false, offense:null, elapsed:null };
+    render("q1");
+    window.scrollTo({top:0, behavior:"smooth"});
+  }
+};
+
+render("q1");
+})();
+</script>
+</body>
+</html>

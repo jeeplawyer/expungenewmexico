@@ -3,418 +3,359 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Expunge New Mexico | The Lahann Law Firm</title>
+<title>New Mexico Expungement Attorney | Expunge New Mexico | The Lahann Law Firm</title>
+<meta name="description" content="Clear your New Mexico record under NMSA § 29-3A. Flat fees from $1,250, payment plans available. Handled by Attorney Jeff Lahann — 35 years in New Mexico courtrooms, expungements since the law took effect. Free eligibility quiz and case review.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --navy: #1B2B4B;
-    --gold: #C9A84C;
-    --cream: #F7F4EF;
-    --lightgold: #F0E6CC;
-    --gray: #6B7280;
-    --lightgray: #E5E7EB;
-    --green: #1A5C38;
-    --red: #8B1A1A;
-    --white: #FFFFFF;
-  }
-  html { scroll-behavior: smooth; }
-  body { font-family: Georgia, 'Times New Roman', serif; background: var(--cream); color: var(--navy); }
+:root{
+  --gold:#F0A500;
+  --paper:#FAF6EC;
+  --ink:#26201E;
+  --ink-soft:#5C5350;
+  --turq:#C41333;
+  --turq-deep:#9C0E27;
+  --line:#E4D9C6;
+  --card:#FFFFFF;
+  --amber:#8A6410;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Public Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--turq-deep)}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+.narrow{max-width:640px;margin:0 auto}
+section{padding:52px 0}
+.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--turq-deep);margin-bottom:10px}
+h1{font-family:'Zilla Slab',serif;font-weight:700;font-size:clamp(1.9rem,6vw,2.9rem);line-height:1.12;margin-bottom:14px}
+h2{font-family:'Zilla Slab',serif;font-weight:700;font-size:clamp(1.4rem,4.5vw,1.9rem);line-height:1.2;margin-bottom:12px}
+h3{font-family:'Zilla Slab',serif;font-weight:600}
+p.lede{color:var(--ink-soft);font-size:1.05rem;max-width:56ch}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:.95rem;border-radius:7px;padding:13px 22px;text-align:center}
+.btn-solid{background:var(--turq);color:#fff}
+.btn-solid:hover{background:var(--turq-deep)}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
 
-  /* NAV */
-  nav {
-    background: var(--navy); padding: 16px 40px;
-    display: flex; justify-content: space-between; align-items: center;
-    position: sticky; top: 0; z-index: 100;
-  }
-  .nav-logo { color: var(--gold); font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; }
-  .nav-phone { color: var(--white); font-size: 15px; font-weight: bold; text-decoration: none; }
-  .nav-phone:hover { color: var(--gold); }
+/* breaking ribbon */
+.breaking{background:var(--turq-deep);color:#EDF5F3}
+.breaking-inner{display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:.83rem;flex-wrap:wrap}
+.breaking-tag{background:var(--gold);color:var(--ink);font-weight:700;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:4px;flex-shrink:0}
+.breaking-text{flex:1;min-width:200px}
+.breaking-link{color:#fff;font-weight:700;text-decoration:none;white-space:nowrap}
+.breaking-link:hover{text-decoration:underline}
 
-  /* HERO */
-  .hero {
-    background: var(--navy);
-    padding: 90px 40px 80px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(135deg, #0f1e35 0%, #1B2B4B 50%, #243a60 100%);
-  }
-  .hero-content { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
-  .hero-eyebrow {
-    color: var(--gold); font-size: 11px; letter-spacing: 0.2em;
-    text-transform: uppercase; margin-bottom: 20px;
-  }
-  .hero h1 {
-    color: var(--white); font-size: clamp(28px, 5vw, 48px);
-    line-height: 1.2; margin-bottom: 20px; font-weight: 700;
-  }
-  .hero h1 span { color: var(--gold); }
-  .hero-divider { width: 50px; height: 2px; background: var(--gold); margin: 0 auto 24px; }
-  .hero p {
-    color: #CBD5E1; font-size: clamp(15px, 2vw, 18px);
-    line-height: 1.8; margin-bottom: 36px; max-width: 580px; margin-left: auto; margin-right: auto;
-  }
-  .btn-primary {
-    display: inline-block; background: var(--gold); color: var(--navy);
-    padding: 16px 36px; border-radius: 3px; font-size: 16px; font-weight: 700;
-    text-decoration: none; letter-spacing: 0.03em; transition: opacity 0.2s;
-    border: none; cursor: pointer; font-family: Georgia, serif;
-  }
-  .btn-primary:hover { opacity: 0.88; }
-  .btn-outline {
-    display: inline-block; background: transparent; color: var(--white);
-    padding: 15px 36px; border-radius: 3px; font-size: 16px; font-weight: 700;
-    text-decoration: none; letter-spacing: 0.03em; transition: all 0.2s;
-    border: 2px solid rgba(255,255,255,0.4); cursor: pointer; font-family: Georgia, serif;
-  }
-  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
-  .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+/* header */
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--paper);z-index:10}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.brand{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.05rem;color:var(--ink);text-decoration:none}
+.brand span{color:var(--turq)}
+.phone{font-weight:600;font-size:.9rem;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:7px 12px;background:#fff}
+.phone:hover{border-color:var(--turq)}
 
-  /* TRUST BAR */
-  .trust-bar {
-    background: var(--lightgold); padding: 18px 40px;
-    display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
-  }
-  .trust-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--navy); font-weight: 600; }
-  .trust-icon { color: var(--gold); font-size: 16px; }
+/* hero */
+.hero{padding:64px 0 40px}
+.trustbar{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:26px;font-size:.85rem;color:var(--ink-soft)}
+.trustbar b{color:var(--ink)}
 
-  /* SECTIONS */
-  section { padding: 72px 40px; }
-  .section-inner { max-width: 900px; margin: 0 auto; }
-  .eyebrow { color: var(--gold); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px; }
-  h2 { font-size: clamp(22px, 3.5vw, 34px); color: var(--navy); margin-bottom: 16px; line-height: 1.3; }
-  .section-divider { width: 40px; height: 2px; background: var(--gold); margin-bottom: 32px; }
+/* new-law callout */
+.newlaw{background:var(--ink);color:#EDE9DD;border-radius:12px;padding:26px 26px 28px;margin-top:8px}
+.newlaw .tag{display:inline-block;background:var(--gold);color:var(--ink);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:12px}
+.newlaw h2{color:#fff}
+.newlaw p{color:#C9C3B4;font-size:.95rem;max-width:60ch}
+.newlaw a.btn-solid{margin-top:16px}
 
-  /* WHY IT MATTERS */
-  .why { background: var(--white); }
-  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; margin-top: 8px; }
-  .why-card {
-    background: var(--cream); border-radius: 4px; padding: 28px 24px;
-    border-top: 3px solid var(--gold);
-  }
-  .why-icon { font-size: 30px; margin-bottom: 14px; }
-  .why-card h3 { font-size: 17px; color: var(--navy); margin-bottom: 8px; }
-  .why-card p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+/* tracks */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:680px){.grid2{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px}
+.panel .statute{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.06em;color:var(--turq-deep);background:#FAE7EA;border-radius:5px;padding:4px 10px;margin-bottom:10px}
+.panel ul{list-style:none;margin-top:10px}
+.panel li{font-size:.9rem;color:var(--ink-soft);padding:5px 0 5px 22px;position:relative}
+.panel li::before{content:"—";position:absolute;left:0;color:var(--turq)}
 
-  /* HOW IT WORKS */
-  .how { background: var(--cream); }
-  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; margin-top: 8px; }
-  .step { display: flex; gap: 18px; align-items: flex-start; }
-  .step-num {
-    width: 40px; height: 40px; border-radius: 50%; background: var(--navy);
-    color: var(--gold); font-size: 16px; font-weight: 700; flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .step h3 { font-size: 16px; color: var(--navy); margin-bottom: 6px; }
-  .step p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+/* pricing */
+.tier{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:28px;position:relative}
+.tier.rec{border-color:var(--turq)}
+.rec-badge{position:absolute;top:-11px;left:20px;background:var(--gold);color:var(--ink);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px}
+.tier .price{font-family:'Zilla Slab',serif;font-weight:700;font-size:2rem;margin:6px 0 2px}
+.tier .price small{font-family:'Public Sans',sans-serif;font-weight:500;font-size:.8rem;color:var(--ink-soft)}
+.tier .sub{font-size:.85rem;color:var(--ink-soft);margin-bottom:14px}
+.tier ul{list-style:none;margin:0 0 18px}
+.tier li{font-size:.9rem;padding:5px 0 5px 24px;position:relative}
+.tier li::before{content:"✓";position:absolute;left:0;color:var(--turq);font-weight:700}
+.tier li.na{color:var(--ink-soft)}
+.tier li.na::before{content:"·";color:var(--ink-soft)}
+.finefine{font-size:.78rem;color:var(--ink-soft);margin-top:14px;max-width:70ch}
 
-  /* ABOUT */
-  .about { background: var(--navy); }
-  .about .eyebrow { color: var(--gold); }
-  .about h2 { color: var(--white); }
-  .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: center; }
-  .about-photo {
-    background: #243a60; border-radius: 4px; aspect-ratio: 3/4;
-    display: flex; align-items: center; justify-content: center;
-    color: #4a6080; font-size: 13px; text-align: center; padding: 20px;
-    border: 1px solid #2d4a70;
-  }
-  .about p { color: #CBD5E1; font-size: 15px; line-height: 1.9; margin-bottom: 16px; }
-  .about-stats { display: flex; gap: 32px; margin-top: 24px; flex-wrap: wrap; }
-  .stat-num { font-size: 32px; font-weight: 700; color: var(--gold); display: block; }
-  .stat-label { font-size: 12px; color: #94A3B8; letter-spacing: 0.05em; text-transform: uppercase; }
+/* steps */
+.steps{counter-reset:s;display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 20px 20px 64px;position:relative;counter-increment:s}
+.step::before{content:counter(s);position:absolute;left:20px;top:18px;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--paper);font-family:'Zilla Slab',serif;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.step h3{font-size:1.02rem;margin-bottom:3px}
+.step p{font-size:.9rem;color:var(--ink-soft)}
 
-  /* PRICING */
-  .pricing { background: var(--cream); }
-  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 8px; }
-  .price-card {
-    background: var(--white); border-radius: 4px; padding: 28px 24px;
-    border: 1.5px solid var(--lightgray); position: relative;
-  }
-  .price-card.featured { border-color: var(--gold); }
-  .featured-label {
-    position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
-    background: var(--gold); color: var(--navy); font-size: 10px; font-weight: 700;
-    padding: 3px 12px; border-radius: 20px; letter-spacing: 0.08em; text-transform: uppercase;
-    white-space: nowrap;
-  }
-  .price-tier { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
-  .price-amount { font-size: 36px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
-  .price-divider { width: 30px; height: 2px; background: var(--gold); margin: 14px 0; }
-  .price-card p { font-size: 14px; color: var(--gray); line-height: 1.7; }
-  .price-note { font-size: 13px; color: var(--gray); text-align: center; margin-top: 20px; font-style: italic; }
+/* about */
+.about{display:block;max-width:640px}
+.about p{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.about p b{color:var(--ink)}
+.credline{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:16px;font-size:.85rem}
+.credline div b{display:block;font-family:'Zilla Slab',serif;font-size:1.25rem;color:var(--ink)}
+.credline div{color:var(--ink-soft)}
 
-  /* FORM */
-  .form-section { background: var(--white); }
-  .form-wrap { max-width: 620px; margin: 0 auto; }
-  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .form-field { margin-bottom: 20px; }
-  .form-field.full { grid-column: 1 / -1; }
-  .form-label {
-    display: block; font-size: 12px; font-weight: 700; color: var(--navy);
-    letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 7px;
-  }
-  .form-label span { color: var(--gold); }
-  .form-input, .form-select, .form-textarea {
-    width: 100%; padding: 11px 14px; font-size: 15px;
-    border: 1.5px solid var(--lightgray); border-radius: 3px;
-    font-family: Georgia, serif; color: var(--navy); background: var(--white);
-    outline: none; transition: border-color 0.2s;
-  }
-  .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--navy); }
-  .form-textarea { resize: vertical; line-height: 1.6; }
-  .form-select {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat; background-position: right 14px center; cursor: pointer;
-  }
-  .consent-row { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 24px; }
-  .consent-box {
-    width: 20px; height: 20px; border: 1.5px solid var(--lightgray);
-    border-radius: 3px; flex-shrink: 0; margin-top: 2px; cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    background: var(--white); transition: all 0.15s;
-  }
-  .consent-box.checked { background: var(--navy); border-color: var(--navy); }
-  .consent-text { font-size: 13px; color: var(--gray); line-height: 1.6; }
-  .submit-btn {
-    width: 100%; padding: 15px; background: var(--navy); color: var(--white);
-    border: none; border-radius: 3px; font-family: Georgia, serif; font-size: 16px;
-    font-weight: 700; cursor: pointer; letter-spacing: 0.03em; transition: opacity 0.2s;
-  }
-  .submit-btn:hover { opacity: 0.88; }
-  .submit-btn:disabled { background: var(--lightgray); color: var(--gray); cursor: not-allowed; opacity: 1; }
-  .form-hint { font-size: 12px; color: var(--gray); margin-top: 6px; line-height: 1.5; }
-  .form-error { background: #FDF2F2; border: 1px solid var(--red); border-radius: 3px; padding: 10px 14px; font-size: 13px; color: var(--red); margin-bottom: 16px; display: none; }
+/* form */
+.formcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
+.formcard label{display:block;font-weight:600;font-size:.88rem;margin:16px 0 6px}
+.formcard input,.formcard select,.formcard textarea{
+  width:100%;font-family:inherit;font-size:.95rem;color:var(--ink);
+  background:#FBFAF6;border:1.5px solid var(--line);border-radius:7px;padding:11px 12px;
+}
+.formcard input:focus,.formcard select:focus,.formcard textarea:focus{outline:2px solid var(--turq);border-color:var(--turq)}
+.formcard textarea{min-height:110px;resize:vertical}
+.formcard button{margin-top:20px;width:100%;border:none;cursor:pointer;font-family:inherit}
+.form-note{font-size:.8rem;color:var(--ink-soft);margin-top:12px}
 
-  /* SUCCESS */
-  .success-msg {
-    display: none; text-align: center; padding: 40px 20px;
-  }
-  .success-circle {
-    width: 60px; height: 60px; border-radius: 50%; background: var(--green);
-    color: var(--white); font-size: 28px; display: flex; align-items: center;
-    justify-content: center; margin: 0 auto 20px;
-  }
-  .success-msg h3 { font-size: 22px; color: var(--navy); margin-bottom: 12px; }
-  .success-msg p { color: var(--gray); font-size: 15px; line-height: 1.8; }
-  .next-steps { text-align: left; background: var(--cream); border-radius: 4px; padding: 20px 24px; margin: 24px auto 0; max-width: 420px; }
-  .next-steps h4 { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray); margin-bottom: 14px; }
-  .next-step { display: flex; gap: 12px; margin-bottom: 10px; align-items: flex-start; font-size: 14px; color: var(--navy); line-height: 1.5; }
-  .next-step-num { width: 22px; height: 22px; border-radius: 50%; background: var(--lightgold); color: var(--navy); font-size: 11px; font-weight: 700; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
-
-  /* FOOTER */
-  footer { background: var(--navy); padding: 40px; text-align: center; }
-  footer .firm-name { color: var(--gold); font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px; }
-  footer p { color: #94A3B8; font-size: 13px; line-height: 1.8; }
-  footer a { color: #94A3B8; text-decoration: none; }
-  footer a:hover { color: var(--gold); }
-  .footer-divider { width: 40px; height: 1px; background: #2d4a70; margin: 16px auto; }
-  .disclaimer { font-size: 11px; color: #64748B; max-width: 600px; margin: 0 auto; line-height: 1.7; }
-
-  /* RESPONSIVE */
-  @media (max-width: 640px) {
-    nav { padding: 14px 20px; }
-    section { padding: 52px 20px; }
-    .trust-bar { gap: 20px; padding: 16px 20px; }
-    .about-grid { grid-template-columns: 1fr; }
-    .about-photo { aspect-ratio: 4/3; }
-    .form-grid { grid-template-columns: 1fr; }
-    .hero { padding: 60px 20px; }
-    footer { padding: 32px 20px; }
-  }
+/* footer */
+footer{border-top:1px solid var(--line);padding:36px 0 48px}
+footer .cols{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;font-size:.9rem}
+.disclaimer{font-size:.75rem;color:var(--ink-soft);margin-top:24px;max-width:80ch}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">The Lahann Law Firm</div>
-  <a class="nav-phone" href="tel:5755234394">(575) 523-4394</a>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-content">
-    <div class="hero-eyebrow">New Mexico Expungement Law</div>
-    <h1>Your Past Doesn't Have to<br><span>Define Your Future.</span></h1>
-    <div class="hero-divider"></div>
-    <p>New Mexico law gives you the right to clear your record. Find out if you qualify — free case review by Attorney Jeff Lahann, no obligation.</p>
-    <div class="hero-btns">
-      <a href="#intake" class="btn-primary">Get My Free Case Review</a>
-      <a href="tel:5755234394" class="btn-outline">Call (575) 523-4394</a>
-    </div>
+<div class="breaking">
+  <div class="wrap breaking-inner">
+    <span class="breaking-tag">Breaking</span>
+    <span class="breaking-text">NM Court of Appeals: first-offense DWI deferred sentences that were completed &amp; dismissed may now be expungeable.</span>
+    <a class="breaking-link" href="/quiz.html">Check yours&nbsp;→</a>
   </div>
 </div>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item"><span class="trust-icon">⚖️</span> Licensed in NM since 1990</div>
-  <div class="trust-item"><span class="trust-icon">📍</span> All 33 New Mexico Counties</div>
-  <div class="trust-item"><span class="trust-icon">✓</span> Free Review — No Obligation</div>
-  <div class="trust-item"><span class="trust-icon">⏱</span> Response Within 2 Business Days</div>
-</div>
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="/">Expunge <span>New Mexico</span></a>
+    <a class="phone" href="#intake">Free Case Review</a>
+  </div>
+</header>
 
-<!-- WHY IT MATTERS -->
-<section class="why">
-  <div class="section-inner">
-    <div class="eyebrow">Why It Matters</div>
-    <h2>A Clean Record Changes Everything</h2>
-    <div class="section-divider"></div>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">🏠</div>
-        <h3>Housing</h3>
-        <p>Landlords run background checks. A sealed record means a fair shot at the home you want — without explaining the past.</p>
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">New Mexico Criminal Record Expungement · NMSA § 29-3A · All 33 Counties</div>
+    <h1>Your past doesn't have to define your future.</h1>
+    <p class="lede">New Mexico law gives you the right to clear your record. Attorney Jeff Lahann has practiced in New Mexico courtrooms for 35 years — and has handled expungements since the day the Expungement Act took effect. Find out where you stand in about two minutes.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="/quiz.html">Take the Free 2-Minute Quiz</a>
+      <a class="btn btn-line" href="#intake">Get a Free Case Review</a>
+    </div>
+    <div class="trustbar">
+      <span>⚖️ <b>Licensed in NM since 1991</b></span>
+      <span>📜 <b>Expungements since the Act took effect</b> (2020)</span>
+      <span>💳 <b>Flat fees</b> · plans available</span>
+      <span>⏱ <b>Free review</b> — answer in 2 business days</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="newlaw">
+      <span class="tag">New in 2026</span>
+      <h2>Told your DWI could never come off your record? That answer just changed.</h2>
+      <p>In 2026 the New Mexico Court of Appeals ruled that a first-offense DWI resolved by a successfully completed deferred sentence — and dismissed — may be eligible for expungement under the non-conviction track. Most websites, and plenty of lawyers, are still giving the old answer. If this is your situation, it's worth two minutes to check.</p>
+      <a class="btn btn-solid" href="/quiz.html">See If the New Ruling Applies to You</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Two Paths Under the Act</div>
+    <h2>How your case ended decides your track.</h2>
+    <div class="grid2" style="margin-top:18px">
+      <div class="panel">
+        <span class="statute">Non-Conviction · § 29-3A-4</span>
+        <h3>Dismissals, acquittals &amp; discharges</h3>
+        <ul>
+          <li>Court <b>shall</b> grant if requirements are met</li>
+          <li>1-year wait from final disposition</li>
+          <li>Hearing only if an agency objects</li>
+          <li>Includes diversion, conditional discharge &amp; traffic-code deferred sentences</li>
+        </ul>
       </div>
-      <div class="why-card">
-        <div class="why-icon">💼</div>
-        <h3>Employment</h3>
-        <p>Most employers screen applicants. Expungement removes the barrier before the interview starts.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🎓</div>
-        <h3>Education & Licensing</h3>
-        <p>College applications, financial aid, professional licenses — a clear record opens every door that a criminal history closes.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">👨‍👩‍👧</div>
-        <h3>Family & Peace of Mind</h3>
-        <p>Stop worrying about background checks. Move forward knowing your record reflects who you are today — not who you were.</p>
+      <div class="panel">
+        <span class="statute">Conviction · § 29-3A-5</span>
+        <h3>Guilty pleas &amp; verdicts</h3>
+        <ul>
+          <li>Judge must find <b>justice will be served</b></li>
+          <li>2–10 year wait from sentence completion, by offense level</li>
+          <li>Hearing in every case</li>
+          <li>Some offenses excluded — the quiz screens for them</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="how">
-  <div class="section-inner">
+<section id="pricing">
+  <div class="wrap">
+    <div class="eyebrow">Transparent Pricing</div>
+    <h2>Two ways to get it done. Both drafted by the attorney.</h2>
+    <p class="lede">No hourly billing, no surprises. Every engagement starts the same way: your official records are pulled and your eligibility is confirmed before anything is drafted.</p>
+    <div class="grid2" style="margin-top:26px">
+
+      <div class="tier">
+        <h3>Drafted &amp; Ready</h3>
+        <div class="price">$1,250 <small>flat fee</small></div>
+        <div class="sub">For petitioners comfortable filing paperwork themselves — with everything built for them first.</div>
+        <ul>
+          <li>DPS &amp; court records pull — I obtain and verify your record</li>
+          <li>Eligibility confirmed against the actual file, not memory</li>
+          <li>Complete petition package drafted for your specific case</li>
+          <li>Supporting narrative, proposed order &amp; service documents</li>
+          <li>Step-by-step filing guide with agency addresses</li>
+          <li class="na">You handle fingerprints, filing &amp; any hearing yourself</li>
+        </ul>
+        <a class="btn btn-line" href="#intake">Start With the Free Review</a>
+      </div>
+
+      <div class="tier rec">
+        <div class="rec-badge">Most Chosen</div>
+        <h3>Full Service</h3>
+        <div class="price">$3,500 <small>non-conviction</small> · $5,000 <small>conviction</small></div>
+        <div class="sub">Payment plans as low as <b>$250/month for qualifying clients</b>, or a three-payment schedule.</div>
+        <ul>
+          <li>Everything in Drafted &amp; Ready</li>
+          <li>Petition filed in the correct district court</li>
+          <li>Service on DPS, the District Attorney &amp; arresting agency</li>
+          <li>Representation at any hearing — I stand next to you</li>
+          <li>Order served on every agency holding your record</li>
+          <li>Follow-up to confirm the record is actually sealed</li>
+        </ul>
+        <a class="btn btn-solid" href="#intake">Start With the Free Review</a>
+      </div>
+
+    </div>
+    <p class="finefine">Fees are flat rates for typical single-case matters and do not include the district court filing fee (currently $132, waivable for income-qualified petitioners) or third-party costs such as fingerprinting. Multiple cases or counties are quoted in writing before any work begins. Drafted &amp; Ready is a limited-scope engagement paid in full at purchase; it ends at delivery of your petition package and does not include filing, service, or court appearance. Payment plan availability is determined by the third-party lender, not the Firm.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
     <div class="eyebrow">The Process</div>
-    <h2>Three Steps. No Guesswork.</h2>
-    <div class="section-divider"></div>
+    <h2>Three steps. No guesswork.</h2>
     <div class="steps">
       <div class="step">
-        <div class="step-num">1</div>
-        <div>
-          <h3>Submit Your Information</h3>
-          <p>Tell us about your case in plain language. No legal terms needed. We ask the simple questions — you answer as best you can.</p>
-        </div>
+        <h3>Tell me about your case — in plain language</h3>
+        <p>The free review form asks simple questions. No legal terms needed, no documents required to start. Or take the 2-minute quiz first for an instant read.</p>
       </div>
       <div class="step">
-        <div class="step-num">2</div>
-        <div>
-          <h3>We Pull Your Record</h3>
-          <p>Attorney Lahann looks up your actual case in the court system. You don't have to remember every detail — we find the facts.</p>
-        </div>
+        <h3>I pull your actual record</h3>
+        <p>You don't have to remember every detail. I look up the real case in the court system and check it against the statute — dispositions, dates, and any waiting period.</p>
       </div>
       <div class="step">
-        <div class="step-num">3</div>
-        <div>
-          <h3>You Get a Clear Answer</h3>
-          <p>Within 2 business days you'll know exactly where you stand, whether you qualify, and what it costs to move forward.</p>
-        </div>
+        <h3>You get a straight answer in 2 business days</h3>
+        <p>Whether you qualify, which track applies, what it costs, and which option fits. If you don't qualify yet, I'll tell you that too — and when you will.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <img src="6C045442-C36E-4F49-ABF5-963114541E2D_1_201_a.jpeg" alt="Attorney Jeff Lahann" style="width:100%;border-radius:4px;object-fit:cover;aspect-ratio:3/4;">
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Who You're Working With</div>
+    <div class="about">
       <div>
-        <div class="eyebrow">About Attorney Lahann</div>
-        <h2 style="color:var(--white)">35 Years. One Goal.</h2>
-        <div class="section-divider"></div>
-        <p>Jeff Lahann has practiced criminal defense in New Mexico since 1990. He founded The Lahann Law Firm in Las Cruces and has helped clients across all 33 New Mexico counties clear their records and reclaim their futures.</p>
-        <p>He built expungenewmexico.com because too many people don't know they qualify — or don't know where to start. Now you have a direct line to find out.</p>
-        <div class="about-stats">
-          <div><span class="stat-num">35+</span><span class="stat-label">Years Experience</span></div>
-          <div><span class="stat-num">33</span><span class="stat-label">NM Counties Served</span></div>
-          <div><span class="stat-num">Free</span><span class="stat-label">Case Review</span></div>
+        <h2>35 years in New Mexico courtrooms. Expungements since day one of the law.</h2>
+        <p>Jeff Lahann has practiced criminal law in New Mexico <b>since 1991</b> — including roughly 13 years as a Deputy District Attorney before founding The Lahann Law Firm in Las Cruces in 2007. He knows how prosecutors evaluate a case because he spent over a decade doing it.</p>
+        <p>When the Criminal Record Expungement Act took effect in <b>January 2020</b>, the Firm began filing expungement petitions immediately — and has been clearing records across all 33 New Mexico counties ever since. He built expungenewmexico.com because too many people don't know they qualify, or don't know where to start.</p>
+        <div class="credline">
+          <div><b>35</b>Years in NM courts</div>
+          <div><b>33</b>Counties served</div>
+          <div><b>2020</b>Expungements since the Act began</div>
+          <div><b>Flat</b>Fees, in writing</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing">
-  <div class="section-inner">
-    <div class="eyebrow">Transparent Pricing</div>
-    <h2>Simple. No Surprises.</h2>
-    <div class="section-divider"></div>
-    <div class="pricing-grid">
-      <div class="price-card">
-        <div class="price-tier">Tier 1</div>
-        <div class="price-amount">$499</div>
-        <div style="font-weight:700;font-size:16px;color:var(--navy);margin-bottom:4px;">DIY Kit</div>
-        <div class="price-divider"></div>
-        <p>Court-ready forms, county-specific filing instructions, and a service checklist. You file it yourself with everything you need.</p>
-      </div>
-      <div class="price-card featured">
-        <div class="featured-label">Most Popular</div>
-        <div class="price-tier">Tier 2</div>
-        <div class="price-amount">$1,999</div>
-        <div style="font-weight:700;font-size:16px;color:var(--navy);margin-bottom:4px;">Attorney-Assisted</div>
-        <div class="price-divider"></div>
-        <p>Attorney Lahann reviews your petition and provides written guidance before you file. No representation — expert eyes on your paperwork.</p>
-      </div>
-      <div class="price-card">
-        <div class="price-tier">Tier 3</div>
-        <div class="price-amount">$3,999</div>
-        <div style="font-weight:700;font-size:16px;color:var(--navy);margin-bottom:4px;">Full Service</div>
-        <div class="price-divider"></div>
-        <p>We handle everything — drafting, filing, serving all required agencies, and appearing in court if needed. You do nothing.</p>
-      </div>
-    </div>
-    <p class="price-note">Not sure which tier is right for you? We'll tell you after your free case review.</p>
+<section id="intake">
+  <div class="wrap narrow">
+    <div class="eyebrow">Free Case Review</div>
+    <h2>Submit your case.</h2>
+    <p class="lede">Answer as best you can — "I don't know" is a fine answer. Attorney Lahann will look up your actual record and contact you within 2 business days with a clear eligibility determination.</p>
+
+    <form class="formcard" action="https://api.web3forms.com/submit" method="POST" style="margin-top:22px">
+      <input type="hidden" name="access_key" value="74221f52-d30c-4d55-8ccf-240b7c82bfa4">
+      <input type="hidden" name="subject" value="New Expungement Case Review — expungenewmexico.com">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+      <label for="f-name">Full name</label>
+      <input id="f-name" type="text" name="name" required autocomplete="name">
+
+      <label for="f-phone">Phone</label>
+      <input id="f-phone" type="tel" name="phone" required autocomplete="tel">
+
+      <label for="f-email">Email</label>
+      <input id="f-email" type="email" name="email" required autocomplete="email">
+
+      <label for="f-county">County where the case happened</label>
+      <select id="f-county" name="county" required>
+        <option value="" disabled selected>Select a county</option>
+        <option>Bernalillo</option><option>Catron</option><option>Chaves</option>
+        <option>Cibola</option><option>Colfax</option><option>Curry</option>
+        <option>De Baca</option><option>Doña Ana</option><option>Eddy</option>
+        <option>Grant</option><option>Guadalupe</option><option>Harding</option>
+        <option>Hidalgo</option><option>Lea</option><option>Lincoln</option>
+        <option>Los Alamos</option><option>Luna</option><option>McKinley</option>
+        <option>Mora</option><option>Otero</option><option>Quay</option>
+        <option>Rio Arriba</option><option>Roosevelt</option><option>San Juan</option>
+        <option>San Miguel</option><option>Sandoval</option><option>Santa Fe</option>
+        <option>Sierra</option><option>Socorro</option><option>Taos</option>
+        <option>Torrance</option><option>Union</option><option>Valencia</option>
+        <option>Not sure / multiple counties</option>
+      </select>
+
+      <label for="f-outcome">How did the case end?</label>
+      <select id="f-outcome" name="how_case_ended" required>
+        <option value="" disabled selected>Pick the closest answer</option>
+        <option>Dismissed / charges dropped</option>
+        <option>Acquitted (found not guilty)</option>
+        <option>Diversion or conditional discharge</option>
+        <option>Deferred sentence (completed &amp; dismissed)</option>
+        <option>Guilty plea or guilty verdict</option>
+        <option>Arrested but never charged</option>
+        <option>I'm not sure</option>
+      </select>
+
+      <label for="f-details">Anything else you can tell me (charges, rough dates, case number if you have it)</label>
+      <textarea id="f-details" name="details" placeholder="Example: possession charge in Las Cruces around 2015, I think it was dismissed…"></textarea>
+
+      <button class="btn btn-solid" type="submit">Send My Free Case Review</button>
+      <p class="form-note">Confidential. Submitting this form does not create an attorney-client relationship, but everything you send is treated as confidential. No obligation, ever.</p>
+    </form>
   </div>
 </section>
 
-<!-- INTAKE FORM -->
-<section class="form-section" id="intake">
-  <div class="section-inner">
-    <div class="form-wrap">
-      <div class="eyebrow">Free Case Review</div>
-      <h2>Submit Your Case</h2>
-      <div class="section-divider"></div>
-      <p style="color:var(--gray);font-size:15px;line-height:1.8;margin-bottom:32px;">
-        Fill out the form below. Attorney Lahann will look up your actual case record and contact you within 2 business days with a clear eligibility determination.
-      </p>
-
-      <div style="overflow:hidden; width:100%;">
-        <iframe 
-          src="https://docs.google.com/forms/d/e/1FAIpQLScidhsd46u2fg_sdwGVAabfukaaMPAroJvTgcXQMwIv9Amh4Q/viewform?embedded=true" 
-          width="100%" 
-          height="2200" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0"
-          style="border:none;">
-          Loading…
-        </iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <div class="firm-name">The Lahann Law Firm, LLC</div>
-  <p>Las Cruces, New Mexico<br>
-    <a href="tel:5755234394">(575) 523-4394</a> ·
-    <a href="mailto:jeff@lahannlaw.com">jeff@lahannlaw.com</a>
-  </p>
-  <div class="footer-divider"></div>
-  <p class="disclaimer">This website is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Contacting The Lahann Law Firm through this website does not establish representation. © 2024 The Lahann Law Firm, LLC. All rights reserved.</p>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <b>The Lahann Law Firm, LLC</b><br>
+        1990 E. Lohman Ave, Ste 213<br>
+        Las Cruces, New Mexico
+      </div>
+      <div>
+        <a href="mailto:jeff@expungenewmexico.com">jeff@expungenewmexico.com</a><br>
+        <a href="/quiz.html">Free Eligibility Quiz</a>
+      </div>
+    </div>
+    <p class="disclaimer">This website provides general information about New Mexico expungement law and does not constitute legal advice. Eligibility depends on the specific facts of each case and your official records. Contacting The Lahann Law Firm through this website does not create an attorney-client relationship. Flat fees and payment plan availability as described above; payment plans are provided by a third-party lender and subject to approval. Past results do not guarantee future outcomes. Attorney Jeff Lahann is licensed in New Mexico. © 2026 The Lahann Law Firm, LLC. All rights reserved. Attorney advertising.</p>
+  </div>
 </footer>
-
 
 </body>
 </html>
