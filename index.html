@@ -308,6 +308,21 @@ footer .cols{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;
 <form class="formcard" action="https://api.web3forms.com/submit" method="POST" style="margin-top:22px">
 <input type="hidden" name="access_key" value="74221f52-d30c-4d55-8ccf-240b7c82bfa4">
 <input type="hidden" name="subject" value="New Expungement Case Review — expungenewmexico.com">
+<input type="hidden" name="from_name" value="Jeff Lahann — ExpungeNewMexico.com">
+<input type="hidden" name="replyto" value="jeff@expungenewmexico.com">
+<input type="hidden" name="_autoresponse" value="Got it — thanks for reaching out. I'm Jeff Lahann, and I personally review every case that comes through ExpungeNewMexico.com. I'll be in touch within one business day, usually sooner.
+
+Two things that speed this up a lot:
+1. Reply to this email with your DATE OF BIRTH (the court database needs it to pull the right record).
+2. If you have a case number or any paperwork from the court, reply with that too — a photo is fine.
+
+Don't worry if you don't have anything. That's what I'm here for.
+
+— Jeff
+The Lahann Law Firm | Est. 2007
+Handling New Mexico expungements since the Act took effect in 2020
+
+This message is confidential. It does not create an attorney-client relationship, and nothing here is a guarantee of any result.">
 <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
 <label for="f-name">Full name</label>
@@ -347,6 +362,9 @@ footer .cols{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;
 <option>Arrested but never charged</option>
 <option>I'm not sure</option>
 </select>
+
+<label for="f-dob">Date of birth <span style="font-weight:normal;opacity:.7">(optional — lets me pull your court record faster)</span></label>
+<input id="f-dob" type="text" name="date_of_birth" placeholder="MM/DD/YYYY" autocomplete="bday" inputmode="numeric">
 
 <label for="f-details">Anything else you can tell me (charges, rough dates, case number if you have it)</label>
 <textarea id="f-details" name="details" placeholder="Example: possession charge in Las Cruces around 2015, I think it was dismissed…"></textarea>
