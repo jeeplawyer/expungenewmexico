@@ -398,5 +398,20 @@ Las Cruces, New Mexico
 </div>
 </footer>
 
+<script>
+(function(){
+  var t = new URLSearchParams(location.search).get('tier');
+  if(!t) return;
+  var label = (t === 'full') ? 'Full Service' : 'Drafted & Ready';
+  var form = document.querySelector('#intake form');
+  if(form){
+    var h = document.createElement('input');
+    h.type = 'hidden'; h.name = 'quiz_recommendation'; h.value = label;
+    form.appendChild(h);
+  }
+  var d = document.getElementById('f-details');
+  if(d && !d.value){ d.value = 'Quiz recommended: ' + label; }
+})();
+</script>
 </body>
 </html>
